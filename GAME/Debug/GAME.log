@@ -1,0 +1,15 @@
+﻿  main.cpp
+E:\GAME\GAME\main.cpp(127,27): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+E:\GAME\GAME\main.cpp(127,27): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(127,36): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+E:\GAME\GAME\main.cpp(127,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(132,41): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+E:\GAME\GAME\main.cpp(132,41): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(132,50): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+E:\GAME\GAME\main.cpp(132,50): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(135,27): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+E:\GAME\GAME\main.cpp(135,27): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(135,36): warning C4838: conversion from 'double' to 'int' requires a narrowing conversion
+E:\GAME\GAME\main.cpp(135,36): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(57,8): warning C4101: 'flameTime': unreferenced local variable
+  GAME.vcxproj -> E:\GAME\Debug\GAME.exe

@@ -12,13 +12,15 @@
 #include <string>
 #include <iostream>
 #include <random>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
 
 
 static SDL_Window* g_window = NULL;
 static SDL_Renderer* g_screen = NULL;
 static SDL_Event g_event;
 SDL_Window* gWindow = NULL;
-
 
 SDL_Renderer* gRenderer = NULL;
 

@@ -31,6 +31,7 @@ SDL_RendererFlip fliptypecato;
 
 int main(int argc, char* args[])
 {
+	std::srand(std::time(NULL));
 	int i = 0;
 	int j = 0;
 	int count = 22;
@@ -49,6 +50,7 @@ int main(int argc, char* args[])
 	int k1 = 0;
 	int h2 = 0;
 	int k2 = 0;
+
 	if (!init())
 	{
 		printf("Failed to initialize!\n");
@@ -92,8 +94,7 @@ int main(int argc, char* args[])
 				}
 
 
-
-				for (int i = 0; i < 20; i++) {
+				for (int i = 0; i < (int)muoi.size(); i++) {
 					if ((int)abs(x - muoi[i].xk) <= 20 && (int)abs(y - muoi[i].yk) <= 20)
 					{
 						SDL_DestroyTexture(muoi[i].Texmuoi);
@@ -103,7 +104,7 @@ int main(int argc, char* args[])
 						dem += 1;
 					}
 				}
-				for (int i = 0; i < 20; i++) {
+				for (int i = 0; i < 10; i++) {
 					if ((int)abs(x - muoito[i].xk) <= 50 && (int)abs(y - muoito[i].yk) <= 50 && dem >= 10)
 					{
 						SDL_DestroyTexture(muoito[i].Texmuoi);
@@ -113,7 +114,7 @@ int main(int argc, char* args[])
 						dem += 1;
 					}
 				}
-				for (int i = 0; i < 10; i++)
+				for (int i = 0; i < (int)muoito.size(); i++)
 				{
 					if (abs(x - muoito[i].xk) <= 40 && abs(y - muoito[i].yk) <= 40 && dem < 10)
 					{
@@ -121,7 +122,7 @@ int main(int argc, char* args[])
 						lose = false;
 					}
 				}
-				for (int i = 0; i < 20; i++) {
+				for (int i = 0; i < (int)bigfish.size(); i++) {
 					if ((int)abs(x - bigfish[i].xk) <= 50 && (int)abs(y - bigfish[i].yk) <= 50 && dem >= 20)
 					{
 						SDL_DestroyTexture(bigfish[i].Texmuoi);
@@ -159,17 +160,14 @@ int main(int argc, char* args[])
 
 
 
-
 				SDL_Rect rectmuoi[20];
 				int testquaydau[20] = {};
 				h1 = (h1 + 1) % 4;
 				k1 = (k1 + h1 / 3) % 14;
-
 				for (int i = 0; i < 20; i++)
 				{
+
 					SDL_Rect ca_nho[13];
-					int h = 0;
-					int k = 0;
 					for (int k = 0; k < 13; k++)
 					{
 						ca_nho[k] = { k * 480,0,480,270 };

@@ -3,19 +3,23 @@
 #define MAIN_FUNCTIONS_H
 
 #include "CommonFunc.h"
+using namespace std;
 
 class object {
 public:
 	SDL_Texture* Texmuoi;
-	int xk = 1280 * (rand() % 2);
-	int yk = rand() % (720 - 50 + 1) + 50;
+	int xk;
+	int yk;
 	double k;
-
+	object() :
+		xk(1280 * ((std::rand() % 4) <= 1)),
+		yk(std::rand() % (720 - 50 + 1) + 50)
+	{}
 };
 
-object muoi[20];
-object muoito[10];
-object bigfish[5];
+std::vector<object> muoi;
+std::vector<object> muoito;
+std::vector<object> bigfish;
 
 bool init();
 bool loadMedia();
@@ -66,17 +70,29 @@ bool loadMedia()
 	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
 	gTexture2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
 	gTexture3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
+	muoi.resize(20);
+	muoito.resize(10);
+	bigfish.resize(5);
 	for (int i = 0; i < 20; i++)
 	{
+
 		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
+		//muoi[i].xk = 1280 * ((std::rand() % 4) <= 1);
+		//muoi[i].yk = std::rand() % (720 - 50 + 1) + 50;
 	}
 	for (int i = 0; i < 10; i++)
 	{
+
 		muoito[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mid_fishok.png");
+		//muoito[i].xk = 1280 * ((std::rand() % 4) <= 1);
+		//muoito[i].yk = std::rand() % (720 - 50 + 1) + 50;
 	}
 	for (int i = 0; i < 5; i++)
 	{
+
 		bigfish[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
+		//bigfish[i].xk = 1280 * ((std::rand() % 4) <= 1);
+		//bigfish[i].yk = std::rand() % (720 - 50 + 1) + 50;
 	}
 	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
 	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");

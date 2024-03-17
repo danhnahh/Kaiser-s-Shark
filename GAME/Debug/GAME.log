@@ -1,3 +1,4 @@
 ﻿  main.cpp
-E:\GAME\GAME\main.cpp(70,8): warning C4101: 'flameTime': unreferenced local variable
+E:\GAME\GAME\main.cpp(34,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\GAME\GAME\main.cpp(72,8): warning C4101: 'flameTime': unreferenced local variable
   GAME.vcxproj -> E:\GAME\Debug\GAME.exe

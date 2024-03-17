@@ -7,15 +7,15 @@
 class object {
 public:
 	SDL_Texture* Texmuoi;
-	int xk = 1280*(rand() % 2);
+	int xk = 1280 * (rand() % 2);
 	int yk = rand() % (720 - 50 + 1) + 50;
 	double k;
-	int x;
-	int y;
 
 };
 
 object muoi[20];
+object muoito[10];
+object bigfish[5];
 
 bool init();
 bool loadMedia();
@@ -62,15 +62,24 @@ bool loadMedia()
 
 	bool success = true;
 
-	gTexture = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/Debug/picture/background.jpg");
+	gTexture = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
 	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
 	gTexture2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
 	gTexture3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
 	for (int i = 0; i < 20; i++)
-		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
-
-
-	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/Debug/picture/victory.jpg");
+	{
+		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
+	}
+	for (int i = 0; i < 10; i++)
+	{
+		muoito[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mid_fishok.png");
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		bigfish[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
+	}
+	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
+	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
 	return success;
 }
 

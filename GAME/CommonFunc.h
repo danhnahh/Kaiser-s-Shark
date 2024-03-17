@@ -28,7 +28,7 @@ SDL_Texture* gTexture1 = NULL;
 SDL_Texture* gTexture2 = NULL;
 SDL_Texture* gTexture3 = NULL;
 SDL_Texture* win = NULL;
-
+SDL_Texture* Lose = NULL;
 
 //screen
 const int SCREEN_WIDTH = 1280;

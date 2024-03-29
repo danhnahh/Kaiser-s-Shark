@@ -11,15 +11,28 @@ public:
 	int xk;
 	int yk;
 	double k;
+	bool trongmanhinh = true;
+	int ykdaptuong;
 	object() :
 		xk(1280 * ((std::rand() % 4) <= 1)),
-		yk(std::rand() % (720 - 50 + 1) + 50)
+		yk(std::rand() % (650 - 50 + 1) + 50)
+
+	{}
+};
+class Move {
+public:
+	int dichuyen;
+
+	Move() :
+		dichuyen(std::rand() % 2 == 0 ? -1 : 1)
 	{}
 };
 
 std::vector<object> muoi;
 std::vector<object> muoito;
 std::vector<object> bigfish;
+
+std::vector<Move> canhodichuyen;
 
 bool init();
 bool loadMedia();
@@ -56,6 +69,16 @@ bool init()
 			success = false;
 		}
 	}
+	if (SDL_Init(SDL_INIT_AUDIO) < 0) {
+		printf("SDL could not initialize! SDL Error: %s\n", SDL_GetError());
+		return 0;
+	}
+
+	// Kh?i t?o SDL2_mixer
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+		printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
+		return 0;
+	}
 
 
 	return success;
@@ -65,15 +88,16 @@ bool loadMedia()
 {
 
 	bool success = true;
-
+	music = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/babyshark1.mp3");
 	gTexture = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
 	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
 	gTexture2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
 	gTexture3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
-	muoi.resize(20);
+	muoi.resize(50);
 	muoito.resize(10);
 	bigfish.resize(5);
-	for (int i = 0; i < 20; i++)
+	canhodichuyen.resize(50);
+	for (int i = 0; i < 50; i++)
 	{
 
 		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
@@ -94,8 +118,8 @@ bool loadMedia()
 		//bigfish[i].xk = 1280 * ((std::rand() % 4) <= 1);
 		//bigfish[i].yk = std::rand() % (720 - 50 + 1) + 50;
 	}
-	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
-	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
+	/*win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
+	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");*/
 	return success;
 }
 
@@ -125,7 +149,8 @@ void close()
 	SDL_DestroyWindow(gWindow);
 	gWindow = NULL;
 	gRenderer = NULL;
-
+	Mix_FreeMusic(music);
+	Mix_CloseAudio();
 	//Quit SDL subsystems
 	IMG_Quit();
 	SDL_Quit();

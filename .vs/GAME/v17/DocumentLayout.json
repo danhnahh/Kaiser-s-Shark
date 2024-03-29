@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\GAME\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|E:\\GAME\\GAME\\CommonFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|solutionrelative:GAME\\CommonFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|E:\\GAME\\GAME\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|solutionrelative:GAME\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|E:\\GAME\\GAME\\CommonFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|solutionrelative:GAME\\CommonFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFEB7657-B185-4AA0-B510-931916C9B69B}|GAME\\GAME.vcxproj|E:\\GAME\\GAME\\mainFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -32,33 +32,33 @@
               "RelativeDocumentMoniker": "GAME\\mainFunc.h",
               "ToolTip": "E:\\GAME\\GAME\\mainFunc.h",
               "RelativeToolTip": "GAME\\mainFunc.h",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAAAIUAAAAGAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAADwv54AAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-17T09:15:15.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CommonFunc.h",
               "DocumentMoniker": "E:\\GAME\\GAME\\CommonFunc.h",
               "RelativeDocumentMoniker": "GAME\\CommonFunc.h",
               "ToolTip": "E:\\GAME\\GAME\\CommonFunc.h",
               "RelativeToolTip": "GAME\\CommonFunc.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-03-17T09:14:49.077Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "main.cpp",
               "DocumentMoniker": "E:\\GAME\\GAME\\main.cpp",
               "RelativeDocumentMoniker": "GAME\\main.cpp",
               "ToolTip": "E:\\GAME\\GAME\\main.cpp",
               "RelativeToolTip": "GAME\\main.cpp",
-              "ViewState": "AQIAAFQBAAAAAAAAAAAAAIgBAAAAAAAA",
+              "ViewState": "AQIAAKcBAAAAAAAAAADwv9YBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-07T16:44:29.719Z",
               "EditorCaption": ""

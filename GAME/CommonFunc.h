@@ -32,6 +32,7 @@ SDL_Texture* gTexture3 = NULL;
 SDL_Texture* win = NULL;
 SDL_Texture* Lose = NULL;
 
+Mix_Music* music;
 //screen
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 720;

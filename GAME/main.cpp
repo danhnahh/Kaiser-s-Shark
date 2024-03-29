@@ -19,6 +19,8 @@ void close();
 
 int thu2[10000];
 
+bool thudaptuong[10000];
+
 int thucato[10000];
 
 int thubigfish[10000];
@@ -31,7 +33,7 @@ SDL_RendererFlip fliptypecato;
 
 int main(int argc, char* args[])
 {
-	std::srand(std::time(NULL));
+	//std::srand(std::time(NULL));
 	int i = 0;
 	int j = 0;
 	int count = 22;
@@ -50,7 +52,7 @@ int main(int argc, char* args[])
 	int k1 = 0;
 	int h2 = 0;
 	int k2 = 0;
-
+	std::srand(std::time(nullptr));
 	if (!init())
 	{
 		printf("Failed to initialize!\n");
@@ -65,7 +67,11 @@ int main(int argc, char* args[])
 		else
 		{
 
-
+			if (!music) {
+				printf("Failed to load music! SDL_mixer Error: %s\n", Mix_GetError());
+				return 2;
+			}
+			Mix_PlayMusic(music, -1);
 			bool quit = false;
 
 			int curentImageIndex = 0;
@@ -92,6 +98,12 @@ int main(int argc, char* args[])
 				if (e.motion.xrel < 0) {
 					fliptype = SDL_FLIP_HORIZONTAL;
 				}
+
+
+
+
+
+
 
 
 				for (int i = 0; i < (int)muoi.size(); i++) {
@@ -134,13 +146,51 @@ int main(int argc, char* args[])
 				}
 				for (int i = 0; i < 5; i++)
 				{
-					if (abs(x - bigfish[i].xk) <= 50 && abs(y - bigfish[i].yk) <= 50 && dem < 20) {
+					if (abs(x - bigfish[i].xk) <= 40 && abs(y - bigfish[i].yk) <= 40 && dem < 20) {
 						SDL_DestroyTexture(gTexture1);
 						lose = false;
 					}
 				}
 
-
+				//for (int i = 0; i < (int)bigfish.size(); i++)
+				//{
+				//	for (int j = 0; j < (int)muoito.size(); j++)
+				//	{
+				//		//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
+				//		if (abs(bigfish[i].xk - muoito[j].xk) <= 50 && abs(bigfish[i].yk - muoito[j].yk) <= 50)
+				//		{
+				//			SDL_DestroyTexture(muoito[j].Texmuoi);
+				//			muoito[j].xk = -100;
+				//			muoito[j].yk = -100;
+				//		}
+				//	}
+				//}
+				//for (int i = 0; i < (int)bigfish.size(); i++)
+				//{
+				//	for (int j = 0; j < (int)muoi.size(); j++)
+				//	{
+				//		//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
+				//		if (abs(bigfish[i].xk - muoi[j].xk) <= 20 && abs(bigfish[i].yk - muoi[j].yk) <= 20)
+				//		{
+				//			SDL_DestroyTexture(muoi[j].Texmuoi);
+				//			muoi[j].xk = -100;
+				//			muoi[j].yk = -100;
+				//		}
+				//	}
+				//}
+				//for (int i = 0; i < (int)muoito.size(); i++)
+				//{
+				//	for (int j = 0; j < (int)muoi.size(); j++)
+				//	{
+				//		//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
+				//		if (abs(muoito[i].xk - muoi[j].xk) <= 20 && abs(muoito[i].yk - muoi[j].yk) <= 20)
+				//		{
+				//			SDL_DestroyTexture(muoi[j].Texmuoi);
+				//			muoi[j].xk = -100;
+				//			muoi[j].yk = -100;
+				//		}
+				//	}
+				//}
 				SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 				SDL_RenderClear(gRenderer);
 
@@ -160,11 +210,12 @@ int main(int argc, char* args[])
 
 
 
-				SDL_Rect rectmuoi[20];
-				int testquaydau[20] = {};
+
+				SDL_Rect rectmuoi[50];
+				int testquaydau[50] = {};
 				h1 = (h1 + 1) % 4;
 				k1 = (k1 + h1 / 3) % 14;
-				for (int i = 0; i < 20; i++)
+				for (int i = 0; i < (int)muoi.size(); i++)
 				{
 
 					SDL_Rect ca_nho[13];
@@ -176,7 +227,7 @@ int main(int argc, char* args[])
 					{
 						thu2[i] = 0;
 					}
-					else if (muoi[i].xk == 0)
+					else if (muoi[i].xk <= 0)
 					{
 						thu2[i] = 1;
 					}
@@ -184,33 +235,60 @@ int main(int argc, char* args[])
 					{
 						k1 = 0;
 					}
+					if (muoi[i].yk >= 700)
+					{
+						muoi[i].trongmanhinh = false;
+					}
+					if (muoi[i].yk <= 0)
+					{
+						muoi[i].trongmanhinh = false;
+					}
+					if (muoi[i].trongmanhinh == false)
+					{
+
+						if (muoi[i].yk >= 700) muoi[i].ykdaptuong = -2;
+						if (muoi[i].yk <= 0) muoi[i].ykdaptuong = 2;
+					}
 					if (abs(muoi[i].yk - y) < 50 && abs(muoi[i].xk - x) < 150)
 					{
 						testquaydau[i] = 1;
 					}
 					if (thu2[i] == 1 && testquaydau[i] == 1)
 					{
-						rectmuoi[i] = { muoi[i].xk -= 2,muoi[i].yk += 0, 80, 80 };
+						rectmuoi[i] = { muoi[i].xk -= 2,muoi[i].yk += (rand() % 3) * ((rand() % 2 == 0) ? -1 : 1), 80, 80 };
 						SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
 
 
 					}
 					else if (thu2[i] == 0 && testquaydau[i] == 1)
 					{
-						rectmuoi[i] = { muoi[i].xk += 2, muoi[i].yk += 0, 80, 80 };
+						rectmuoi[i] = { muoi[i].xk += 2, muoi[i].yk += (rand() % 3) * ((rand() % 2 == 0) ? -1 : 1), 80, 80 };
 						SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_HORIZONTAL);
 
 					}
 					else if (thu2[i] == 0)
 					{
-						rectmuoi[i] = { muoi[i].xk -= 1, muoi[i].yk += 0, 80, 80 };
+						rectmuoi[i] = { muoi[i].xk -= (rand() % 3) , muoi[i].yk += canhodichuyen[i].dichuyen, 80, 80 };
 						SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
+						if (muoi[i].trongmanhinh == false)
+						{
+							rectmuoi[i] = { muoi[i].xk -= (rand() % 3) , muoi[i].yk += muoi[i].ykdaptuong, 80, 80 };
+							SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
+							//muoi[i + 1].trongmanhinh = false;
+						}
+
 
 					}
 					else if (thu2[i] == 1)
 					{
-						rectmuoi[i] = { muoi[i].xk += 1,muoi[i].yk += 0, 80, 80 };
+						rectmuoi[i] = { muoi[i].xk += (rand() % 3) ,muoi[i].yk += canhodichuyen[i].dichuyen, 80, 80 };
 						SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_HORIZONTAL);
+						if (muoi[i].trongmanhinh == false)
+						{
+							rectmuoi[i] = { muoi[i].xk += (rand() % 3) , muoi[i].yk += muoi[i].ykdaptuong, 80, 80 };
+							SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_HORIZONTAL);
+							//muoi[i + 1].trongmanhinh = false;
+						}
 
 					}
 				}
@@ -241,7 +319,7 @@ int main(int argc, char* args[])
 						thucato[i] = 0;
 
 					}
-					else if (muoito[i].xk == 0)
+					else if (muoito[i].xk <= 0)
 					{
 
 						thucato[i] = 1;
@@ -304,7 +382,7 @@ int main(int argc, char* args[])
 						thubigfish[i] = 0;
 
 					}
-					else if (bigfish[i].xk == 0)
+					else if (bigfish[i].xk <= 0)
 					{
 
 						thubigfish[i] = 1;

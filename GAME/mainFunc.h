@@ -118,8 +118,8 @@ bool loadMedia()
 		//bigfish[i].xk = 1280 * ((std::rand() % 4) <= 1);
 		//bigfish[i].yk = std::rand() % (720 - 50 + 1) + 50;
 	}
-	/*win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
-	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");*/
+	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
+	//Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
 	return success;
 }
 

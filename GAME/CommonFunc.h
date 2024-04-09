@@ -31,8 +31,22 @@ SDL_Texture* gTexture2 = NULL;
 SDL_Texture* gTexture3 = NULL;
 SDL_Texture* win = NULL;
 SDL_Texture* Lose = NULL;
+SDL_Texture* startmenu = NULL;
+int dem = 0;
+
+bool start = 0;
+
+SDL_RendererFlip fliptype = SDL_FLIP_NONE;
+
+SDL_RendererFlip fliptype1;
+
+SDL_RendererFlip fliptypecato;
 
 Mix_Music* music;
+Mix_Music* daddy;
+Mix_Chunk* eatlevel1;
+Mix_Chunk* eatlevel2;
+Mix_Chunk* eatlevel3;
 //screen
 const int SCREEN_WIDTH = 1280;
 const int SCREEN_HEIGHT = 720;

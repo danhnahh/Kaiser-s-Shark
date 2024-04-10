@@ -12,11 +12,19 @@ public:
 	int yk;
 	double k;
 	bool trongmanhinh = true;
-	int ykdaptuong;
+	int ykdaptuong = 0;
+	bool test_alive = 1;
+	void free() {
+		SDL_Texture* Texmuoi;
+		trongmanhinh = true;
+		ykdaptuong = 0;
+		test_alive = 1;
+		xk = 1280 * ((std::rand() % 4) <= 1);
+		yk = std::rand() % (650 - 50 + 1) + 50;
+	}
 	object() :
 		xk(1280 * ((std::rand() % 4) <= 1)),
 		yk(std::rand() % (650 - 50 + 1) + 50)
-
 	{}
 };
 class Move {
@@ -119,7 +127,7 @@ bool loadMedia()
 		bigfish[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
 
 	}
-	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
+	Win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
 	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
 	return success;
 }

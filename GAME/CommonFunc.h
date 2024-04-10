@@ -29,12 +29,10 @@ SDL_Texture* gTexture = NULL;
 SDL_Texture* gTexture1 = NULL;
 SDL_Texture* gTexture2 = NULL;
 SDL_Texture* gTexture3 = NULL;
-SDL_Texture* win = NULL;
+SDL_Texture* Win = NULL;
 SDL_Texture* Lose = NULL;
 SDL_Texture* startmenu = NULL;
-int dem = 0;
 
-bool start = 0;
 
 SDL_RendererFlip fliptype = SDL_FLIP_NONE;
 

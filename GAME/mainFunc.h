@@ -106,13 +106,13 @@ bool loadMedia()
 	gTexture = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
 	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
 	startmenu = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/startmenu.jpg");
-	muoi.resize(50);
+	Pause = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/pause.jpg");
+	muoi.resize(20);
 	muoito.resize(10);
 	bigfish.resize(5);
-	canhodichuyen.resize(50);
-	for (int i = 0; i < 50; i++)
+	canhodichuyen.resize(20);
+	for (int i = 0; i < 20; i++)
 	{
-
 		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
 	}
 	for (int i = 0; i < 10; i++)
@@ -649,46 +649,5 @@ void handleRestart() {
 //}
 
 
-//bool loadMedia()
-//{
-//
-//	bool success = true;
-//
-//	music = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/babyshark1.mp3");
-//
-//
-//	gTexture = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
-//	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
-//	gTexture2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
-//	gTexture3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish.png");
-//	muoi.resize(50);
-//	muoito.resize(10);
-//	bigfish.resize(5);
-//	canhodichuyen.resize(50);
-//	for (int i = 0; i < 50; i++)
-//	{
-//
-//		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
-//		//muoi[i].xk = 1280 * ((std::rand() % 4) <= 1);
-//		//muoi[i].yk = std::rand() % (720 - 50 + 1) + 50;
-//	}
-//	for (int i = 0; i < 10; i++)
-//	{
-//
-//		muoito[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mid_fishok.png");
-//		//muoito[i].xk = 1280 * ((std::rand() % 4) <= 1);
-//		//muoito[i].yk = std::rand() % (720 - 50 + 1) + 50;
-//	}
-//	for (int i = 0; i < 5; i++)
-//	{
-//
-//		bigfish[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
-//		//bigfish[i].xk = 1280 * ((std::rand() % 4) <= 1);
-//		//bigfish[i].yk = std::rand() % (720 - 50 + 1) + 50;
-//	}
-//	win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
-//	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
-//	return success;
-//}
 
 #endif

@@ -2,5 +2,11 @@
 E:\GAME\GAME\mainFunc.h(18,16): warning C4101: 'Texmuoi': unreferenced local variable
   (compiling source file 'main.cpp')
   
-E:\GAME\GAME\main.cpp(92,8): warning C4101: 'flameTime': unreferenced local variable
+E:\GAME\GAME\main.cpp(231,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\GAME\GAME\main.cpp(232,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\GAME\GAME\main.cpp(595,38): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(595,67): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(1036,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(1036,66): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME\GAME\main.cpp(105,8): warning C4101: 'flameTime': unreferenced local variable
   GAME.vcxproj -> E:\GAME\Debug\GAME.exe

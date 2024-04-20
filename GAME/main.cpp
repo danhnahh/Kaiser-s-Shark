@@ -370,7 +370,6 @@ int main(int argc, char* args[])
 							SDL_RenderClear(gRenderer);
 
 
-
 							SDL_Rect topLeftViewport;
 							topLeftViewport.x = 0;
 							topLeftViewport.y = 0;

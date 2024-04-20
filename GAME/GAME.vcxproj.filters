@@ -18,9 +18,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Text.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+=======
+>>>>>>> b91125f8132aa58cfc6912ffe640c7440b82e02e
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonFunc.h">
@@ -29,8 +32,11 @@
     <ClInclude Include="mainFunc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Text.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> b91125f8132aa58cfc6912ffe640c7440b82e02e
   </ItemGroup>
 </Project>

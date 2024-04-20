@@ -134,7 +134,7 @@ bool init()
 //		return NULL;
 //	}
 //
-//	// Xoá surface không c?n thi?t
+//	// Xoï¿½ surface khï¿½ng c?n thi?t
 //	SDL_FreeSurface(textSurface);
 //
 //	return textTexture;

@@ -133,12 +133,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="Text.cpp" />
+=======
+>>>>>>> b91125f8132aa58cfc6912ffe640c7440b82e02e
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonFunc.h" />
     <ClInclude Include="mainFunc.h" />
+<<<<<<< HEAD
     <ClInclude Include="Text.h" />
+=======
+>>>>>>> b91125f8132aa58cfc6912ffe640c7440b82e02e
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

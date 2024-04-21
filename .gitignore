@@ -1,2 +1,3 @@
-*.tmp 
-/build/ 
+# Sample .gitignore file 
+*.ipch 
+

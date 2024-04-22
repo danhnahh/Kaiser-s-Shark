@@ -14,14 +14,14 @@ public:
 	int yk;
 	double k;
 	bool trongmanhinh = true;
-	int ykdaptuong=0;
+	int ykdaptuong = 0;
 	bool test_alive = 1;
 	void free() {
 		SDL_Texture* Texmuoi;
 		trongmanhinh = true;
-		ykdaptuong=0;
-	    test_alive = 1;
-		xk= 1280 * ((std::rand() % 4) <= 1);
+		ykdaptuong = 0;
+		test_alive = 1;
+		xk = 1280 * ((std::rand() % 4) <= 1);
 		yk = std::rand() % (650 - 50 + 1) + 50;
 	}
 	object() :
@@ -32,18 +32,18 @@ public:
 class Move {
 public:
 	int dichuyen;
-	
-	Move():
+
+	Move() :
 		dichuyen(std::rand() % 2 == 0 ? -1 : 1)
 	{}
 };
 
 class Boss_Bullet {
-	public:
-		int x;
-		int y;
-		void rebullet() {
-			x = 250; y = 250;
+public:
+	int x;
+	int y;
+	void rebullet() {
+		x = 250; y = 250;
 	}
 };
 
@@ -53,8 +53,8 @@ TextObject ca_nho;
 TextObject ca_vua;
 TextObject ca_to;
 TextObject dem_gio;
-
-
+TextObject sound;
+TextObject Music;
 
 std::vector<object> muoi;
 std::vector<object> muoito;
@@ -119,33 +119,14 @@ bool init()
 	return success;
 }
 
-//SDL_Texture* loadText(SDL_Renderer* renderer, TTF_Font* font, const std::string& text, const SDL_Color& color) {
-//	// T?o surface t? v?n b?n
-//	SDL_Surface* textSurface = TTF_RenderText_Solid(font, text.c_str(), color);
-//	if (textSurface == NULL) {
-//		printf("Unable to render text surface! SDL_ttf Error: %s\n", TTF_GetError());
-//		return NULL;
-//	}
-//
-//	// T?o texture t? surface
-//	SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-//	if (textTexture == NULL) {
-//		printf("Unable to create texture from rendered text! SDL Error: %s\n", SDL_GetError());
-//		return NULL;
-//	}
-//
-//	// Xoá surface không c?n thi?t
-//	SDL_FreeSurface(textSurface);
-//
-//	return textTexture;
-//}
+
 
 bool loadMedia()
 {
 
 	bool success = true;
 	font_tong = TTF_OpenFont("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/font/font_tong.ttf", 50);
-	
+
 
 	Boss = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/taungamoke.png");
 	music = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/ingame.mp3");
@@ -245,17 +226,17 @@ void close()
 }
 
 void handleRestart() {
-	
+
 	close();
 
-	
+
 	if (!init()) {
 		std::cout << "Failed to restart SDL." << std::endl;
-		
+
 		return;
 	}
 
-	
+
 }
 
 

@@ -74,9 +74,12 @@ int main(int argc, char* args[])
 	float X;
 	float Y;
 
+	bool sound_button = true;
+
 	int start = 0;
 
-	
+	bool musicon = true;
+	bool soundon = true;
 
 	bool alive = true;
 	bullet.x = x2 + 100;
@@ -94,7 +97,7 @@ int main(int argc, char* args[])
 	bool check_until = false;
 
 	/*diem_so.SetColor(TextObject::WHITE_TEXT);*/
-	
+
 	/*float delta_x;
 	float delta_y;
 	float angle;*/
@@ -123,26 +126,26 @@ int main(int argc, char* args[])
 			bool flipImage = false;
 
 			/*diem_so.SetColor(TextObject::WHITE_TEXT);*/
-			
+
 			while (!quit)
 			{
 				flameStart = SDL_GetTicks();
 				while (SDL_PollEvent(&e) != 0)
 				{
-					
+
 
 					if (e.type == SDL_QUIT)
 					{
 						quit = true;
 
 					}
-					
-					
+
+
 					SDL_GetMouseState((&x), (&y));
 					//cout << x << " " << y << endl;
 					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 478 && x <= 755 && y >= 275 && y <= 354 && checktype == false && start == 0)
 					{
-						
+
 						cout << "okeokeoke";
 						start = 1;
 						click = true;
@@ -150,16 +153,16 @@ int main(int argc, char* args[])
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 
-					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 503 && x <= 737 && y >= 402 && y <= 466  && start == 0 )
+					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 503 && x <= 737 && y >= 402 && y <= 466 && start == 0)
 					{
-						
+
 						start = 3;
 						click = true;
-						
+
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 
-					if (e.type == SDL_MOUSEBUTTONDOWN && ((lose == false && x >= 518 && x <= 741 && y >= 601 && y <= 654) || ( win == true && x >= 581 && x <= 695 && y >= 395 && y <= 435)) )
+					if (e.type == SDL_MOUSEBUTTONDOWN && ((lose == false && x >= 518 && x <= 741 && y >= 601 && y <= 654) || (win == true && x >= 581 && x <= 695 && y >= 395 && y <= 435)))
 					{
 						bullet;
 						win = false;
@@ -181,7 +184,8 @@ int main(int argc, char* args[])
 						dem_ca_to = 0;
 						typegame = 0;
 
-
+						soundon = true;
+						musicon = true;
 
 						int h = 0;
 						int k = 0;
@@ -208,14 +212,14 @@ int main(int argc, char* args[])
 							bigfish[i].free();
 						}
 					}
-					
-					if(pause == true)
+
+					if (pause == true)
 					{
-						if (e.type == SDL_MOUSEBUTTONDOWN && x >= 448 && x <= 829 && y >= 193 && y <= 295 )
+						if (e.type == SDL_MOUSEBUTTONDOWN && x >= 448 && x <= 829 && y >= 193 && y <= 295)
 						{
 							pause = false;
 						}
-						if(e.type == SDL_MOUSEBUTTONDOWN && x >= 428 && x <= 829 && y >= 368 && y <= 459)
+						if (e.type == SDL_MOUSEBUTTONDOWN && x >= 428 && x <= 829 && y >= 368 && y <= 459)
 						{
 							bullet;
 							win = false;
@@ -225,7 +229,7 @@ int main(int argc, char* args[])
 							i = 0;
 							j = 0;
 							count = 22;
-							 
+
 							x = 0;
 							y = 0;
 							x1 = SCREEN_WIDTH / 2;
@@ -235,7 +239,10 @@ int main(int argc, char* args[])
 							thu = 0;
 							size_x = 0;
 							size_y = 0;
-							//
+
+							soundon = true;
+							musicon = true;
+
 							dem_ca_nho = 0;
 							dem_ca_vua = 0;
 							dem_ca_to = 0;
@@ -251,7 +258,7 @@ int main(int argc, char* args[])
 							dem = 0;
 							alive = true;
 							bullet.rebullet();
-							bullet.x = x2 +100;
+							bullet.x = x2 + 100;
 							bullet.y = y2 + 100;
 							for (int i = 0; i < (int)muoi.size(); i++) {
 								muoi[i].free();
@@ -264,7 +271,7 @@ int main(int argc, char* args[])
 							}
 						}
 					}
-					else 
+					else
 					{
 						if (e.type == SDL_MOUSEBUTTONDOWN && x >= 1125 && x <= 1231 && y >= 17 && y <= 88)
 						{
@@ -272,26 +279,25 @@ int main(int argc, char* args[])
 						}
 					}
 				}
-					X = x;
-					Y = y;
-					
+				X = x;
+				Y = y;
 				if (start == 0)
 				{
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
 
 					Mix_PlayMusic(music, -1);
-					
+
 					SDL_Rect startgame = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
 					SDL_RenderCopy(gRenderer, startmenu, NULL, &startgame);
-					
+
 
 					SDL_Rect Option = { 503,402,230,70 };
 					SDL_RenderCopy(gRenderer, option_item, NULL, &Option);
 					SDL_RenderPresent(gRenderer);
 				}
-				if(start == 3 && click == false)
+				if (start == 3 && click == false)
 				{
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
@@ -301,14 +307,93 @@ int main(int argc, char* args[])
 					SDL_RenderClear(gRenderer);
 					SDL_RenderCopy(gRenderer, option, NULL, &game_option);
 
+
+
+
+
+
+
+					//cout << click;
+
+					//cout << x << " " << y << endl;
+					if (soundon == true)
+					{
+						SDL_Rect Sound = { 580,220,48,48 };
+						SDL_RenderCopy(gRenderer, turn_on, NULL, &Sound);
+					}
+					else if (soundon == false) {
+						SDL_Rect Sound = { 580,220,48,48 };
+						SDL_RenderCopy(gRenderer, turn_off, NULL, &Sound);
+					}
+
+					if (musicon == true)
+					{
+						SDL_Rect Music_button = { 580,320,48,48 };
+						SDL_RenderCopy(gRenderer, turn_on, NULL, &Music_button);
+					}
+					else if (musicon == false) {
+						SDL_Rect Music_button = { 580,320,48,48 };
+						SDL_RenderCopy(gRenderer, turn_off, NULL, &Music_button);
+					}
+
+
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 580 && x <= 628 && y >= 220 && y <= 268)
+					{
+						if (soundon == true)
+						{
+							soundon = false;
+							e.type = SDL_MOUSEBUTTONUP;
+						}
+						else {
+							soundon = true;
+							e.type = SDL_MOUSEBUTTONUP;
+						}
+
+					}
+
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 580 && x <= 628 && y >= 320 && y <= 368)
+					{
+						if (musicon == true)
+						{
+							musicon = false;
+							e.type = SDL_MOUSEBUTTONUP;
+						}
+						else {
+							musicon = true;
+							e.type = SDL_MOUSEBUTTONUP;
+						}
+
+					}
+					/*else if (e.type == SDL_MOUSEBUTTONUP ) { sound_button = false; }
+
+					if (SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 580 && x <= 628 && y >= 220 && y <= 268 && soundon == true )
+					{
+						soundon = false;
+
+					}
+					else if (e.type == SDL_MOUSEBUTTONUP) { sound_button = true;}*/
+
+
+
+
+
+					sound.Free();
+					sound.SetColor(TextObject::RED_TEXT);
+					string strMark1("SOUND:");
+					sound.SetText(strMark1);
+					sound.LoadFromRenderText(font_tong, gRenderer);
+					sound.RenderText(gRenderer, 390, 200);
+
+					Music.Free();
+					Music.SetColor(TextObject::RED_TEXT);
+					string strMark2("MUSIC:");
+					Music.SetText(strMark2);
+					Music.LoadFromRenderText(font_tong, gRenderer);
+					Music.RenderText(gRenderer, 390, 300);
+
 					SDL_Rect return_item = { 40,50,100,80 };
-					
-					cout << x << " " << y << endl;
-
-					SDL_Rect music = {};
-
 					SDL_RenderCopy(gRenderer, arrow, NULL, &return_item);
-					if(SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 40 && x <= 140 && y >= 50 && y <= 120)
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 40 && x <= 140 && y >= 50 && y <= 120)
 					{
 						click = true;
 						start = 0;
@@ -316,7 +401,7 @@ int main(int argc, char* args[])
 					else if (e.type == SDL_MOUSEBUTTONUP) {
 						click = false; cout << 1;
 					}
-					
+
 					SDL_RenderPresent(gRenderer);
 				}
 
@@ -327,24 +412,24 @@ int main(int argc, char* args[])
 					SDL_RenderClear(gRenderer);
 
 					/*Mix_PlayMusic(music, -1);*/
-					
+
 					SDL_Rect type = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
 					SDL_RenderCopy(gRenderer, Type, NULL, &type);
-					SDL_Rect type1 = {72,248,266,173};
+					SDL_Rect type1 = { 72,248,266,173 };
 					SDL_RenderCopy(gRenderer, Type1, NULL, &type1);
-					SDL_Rect type2 = {493,251,266,173};
+					SDL_Rect type2 = { 493,251,266,173 };
 					SDL_RenderCopy(gRenderer, Type2, NULL, &type2);
-					SDL_Rect type3 = {908,249,266,173};
+					SDL_Rect type3 = { 908,249,266,173 };
 					SDL_RenderCopy(gRenderer, Type3, NULL, &type3);
-					
+
 					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 48 && x <= 343 && y >= 239 && y <= 431)
 					{
 						click = true;
 						typegame = 1;
 						start = 2;
-						
-						
+
+
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 478 && x <= 766 && y >= 237 && y <= 428)
@@ -352,7 +437,7 @@ int main(int argc, char* args[])
 						click = true;
 						typegame = 2;
 						start = 2;
-						
+
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 910 && x <= 1172 && y >= 247 && y <= 412)
@@ -360,12 +445,12 @@ int main(int argc, char* args[])
 						click = true;
 						typegame = 3;
 						start = 2;
-						
+
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 					SDL_Rect return_item = { 40,50,100,80 };
 					SDL_RenderCopy(gRenderer, arrow, NULL, &return_item);
-					if (SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 40 && x <= 140 && y >= 50 && y <= 120 )
+					if (SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 40 && x <= 140 && y >= 50 && y <= 120)
 					{
 						click = true;
 						start = 0;
@@ -388,7 +473,7 @@ int main(int argc, char* args[])
 					SDL_RenderCopy(gRenderer, Pause, NULL, &pausegame);
 					SDL_RenderPresent(gRenderer);
 				}
-				
+
 				if (typegame == 1 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_RIGHT) { check_until = true; }
 
 				if (start == 2) {
@@ -404,14 +489,6 @@ int main(int argc, char* args[])
 								fliptype = SDL_FLIP_HORIZONTAL;
 							}
 							/*std::cout << dem;*/
-
-
-
-
-
-
-
-
 
 
 							ca_nho.Free();
@@ -435,7 +512,7 @@ int main(int argc, char* args[])
 							SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 							SDL_RenderClear(gRenderer);
 
-							
+
 
 							SDL_Rect topLeftViewport;
 							topLeftViewport.x = 0;
@@ -450,19 +527,19 @@ int main(int argc, char* args[])
 							SDL_RenderClear(gRenderer);
 							SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
 
-							SDL_Rect Board = {0,0,1280,100};
+							SDL_Rect Board = { 0,0,1280,100 };
 							SDL_RenderCopy(gRenderer, board, NULL, &Board);
-							
+
 							SDL_Rect Pause = { 1125,17,106,70 };
-							SDL_RenderCopy( gRenderer, pausegame , NULL ,&Pause );
+							SDL_RenderCopy(gRenderer, pausegame, NULL, &Pause);
 
 							SDL_Rect IconSmall = { 30,30,40,40 };
-							SDL_RenderCopy(gRenderer,iconsmall,NULL,&IconSmall);
+							SDL_RenderCopy(gRenderer, iconsmall, NULL, &IconSmall);
 
 							SDL_Rect IconMid = { SCREEN_WIDTH / 2 - 50,25,50,50 };
 							SDL_RenderCopy(gRenderer, iconmid, NULL, &IconMid);
 
-							SDL_Rect IconBig = { SCREEN_WIDTH - 105*3,25,60,60 };
+							SDL_Rect IconBig = { SCREEN_WIDTH - 105 * 3,25,60,60 };
 							SDL_RenderCopy(gRenderer, iconbig, NULL, &IconBig);
 
 							ca_nho.SetText(strMark1);
@@ -477,12 +554,12 @@ int main(int argc, char* args[])
 							ca_to.LoadFromRenderText(font_tong, gRenderer);
 							ca_to.RenderText(gRenderer, SCREEN_WIDTH - 120 * 2, 10);
 
-							int toado_x = x - size_x/2;
-							int toado_y = y - size_y/2;
+							int toado_x = x - size_x / 2;
+							int toado_y = y - size_y / 2;
 
 							if (check_until == true) {
 								SDL_Rect ULTI;
-								ULTI = {  toado_x,  toado_y , size_x += 4,size_y += 4 };
+								ULTI = { toado_x,  toado_y , size_x += 4,size_y += 4 };
 								SDL_RenderCopy(gRenderer, ulti, NULL, &ULTI);
 							}
 
@@ -507,7 +584,7 @@ int main(int argc, char* args[])
 									bigfish[i].yk = -100;
 								}
 							}
-							
+
 
 							SDL_Rect rectmuoi[50];
 							int testquaydau[50] = {};
@@ -568,11 +645,11 @@ int main(int argc, char* args[])
 									}
 									else if (thu2[i] == 0)
 									{
-										rectmuoi[i] = { muoi[i].xk -=2* (rand() % 3) , muoi[i].yk += canhodichuyen[i].dichuyen, 80, 80 };
+										rectmuoi[i] = { muoi[i].xk -= 2 * (rand() % 3) , muoi[i].yk += canhodichuyen[i].dichuyen, 80, 80 };
 										SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
 										if (muoi[i].trongmanhinh == false)
 										{
-											rectmuoi[i] = { muoi[i].xk -=2* (rand() % 3) , muoi[i].yk += muoi[i].ykdaptuong, 80, 80 };
+											rectmuoi[i] = { muoi[i].xk -= 2 * (rand() % 3) , muoi[i].yk += muoi[i].ykdaptuong, 80, 80 };
 											SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
 											//muoi[i + 1].trongmanhinh = false;
 										}
@@ -638,26 +715,26 @@ int main(int argc, char* args[])
 									}
 									if (thucato[i] == 1 && ca_to_quay_dau[i] == 1 && dem >= 10)
 									{
-										Rectcato[i] = { muoito[i].xk -= rand() % (3 - 2 + 1) + 2, muoito[i].yk += 0, 80, 80};
+										Rectcato[i] = { muoito[i].xk -= rand() % (3 - 2 + 1) + 2, muoito[i].yk += 0, 80, 80 };
 										SDL_RenderCopyEx(gRenderer, muoito[i].Texmuoi, &ca_vua[k], &Rectcato[i], NULL, NULL, SDL_FLIP_NONE);
 
 
 									}
 									else if (thucato[i] == 0 && ca_to_quay_dau[i] == 1 && dem >= 10)
 									{
-										Rectcato[i] = { muoito[i].xk += rand() % (3 - 2 + 1) + 2, muoito[i].yk += 0, 80, 80};
+										Rectcato[i] = { muoito[i].xk += rand() % (3 - 2 + 1) + 2, muoito[i].yk += 0, 80, 80 };
 										SDL_RenderCopyEx(gRenderer, muoito[i].Texmuoi, &ca_vua[k], &Rectcato[i], NULL, NULL, SDL_FLIP_HORIZONTAL);
 
 
 									}
 									else if (thucato[i] == 0)
 									{
-										Rectcato[i] = { muoito[i].xk -= rand() % (3 - 2 + 1) + 2, muoito[i].yk += 0, 80, 80};
+										Rectcato[i] = { muoito[i].xk -= rand() % (3 - 2 + 1) + 2, muoito[i].yk += 0, 80, 80 };
 										SDL_RenderCopyEx(gRenderer, muoito[i].Texmuoi, &ca_vua[k], &Rectcato[i], NULL, NULL, SDL_FLIP_NONE);
 									}
 									else if (thucato[i] == 1)
 									{
-										Rectcato[i] = { muoito[i].xk += rand() % (3 - 2 + 1) + 2,muoito[i].yk += 0, 80, 80};
+										Rectcato[i] = { muoito[i].xk += rand() % (3 - 2 + 1) + 2,muoito[i].yk += 0, 80, 80 };
 										SDL_RenderCopyEx(gRenderer, muoito[i].Texmuoi, &ca_vua[k], &Rectcato[i], NULL, NULL, SDL_FLIP_HORIZONTAL);
 
 									}
@@ -726,7 +803,7 @@ int main(int argc, char* args[])
 								}
 
 							}
-							
+
 							float delta_x;
 							float delta_y;
 							/*float angle;*/
@@ -770,13 +847,13 @@ int main(int argc, char* args[])
 									bullet.y = y2 + 100;
 									daban = false;
 								}
-								if(win == false)
-								if (abs(bullet.x - x) <= 30 && abs(bullet.y - y) <= 30 && alive == true) {
-									alive = false;
-									lose = false;
-									daban = true;
-									cout << "biban" << endl;
-								}
+								if (win == false)
+									if (abs(bullet.x - x) <= 30 && abs(bullet.y - y) <= 30 && alive == true) {
+										alive = false;
+										lose = false;
+										daban = true;
+										cout << "biban" << endl;
+									}
 								for (int i = 0; i < (int)muoi.size(); i++) {
 									if ((int)abs(bullet.x - muoi[i].xk) <= 20 && (int)abs(bullet.y - muoi[i].yk) <= 20 && muoi[i].test_alive == 1 && alive == true)
 									{
@@ -825,7 +902,7 @@ int main(int argc, char* args[])
 
 									}
 								}
-								if (abs(toado_x - bullet.x) <= size_x - 20 && abs(toado_y - bullet.y) <= size_y - 20) { 
+								if (abs(toado_x - bullet.x) <= size_x - 20 && abs(toado_y - bullet.y) <= size_y - 20) {
 									bullet.rebullet();
 									bullet.x = x2 + 100;
 									bullet.y = y2 + 100;
@@ -833,7 +910,7 @@ int main(int argc, char* args[])
 								}
 								if (abs(toado_x - x2) <= size_x - 20 && abs(toado_y - y2) <= size_y - 20) { win = true; daban = true; }
 							}
-							
+
 							if (alive == true)
 							{
 
@@ -844,7 +921,7 @@ int main(int argc, char* args[])
 
 
 								}
-								
+
 								SDL_Rect rect4;
 								if (dem < 10)
 								{
@@ -872,13 +949,13 @@ int main(int argc, char* args[])
 									muoi[i].yk = -100;*/
 									muoi[i].test_alive = 0;
 									muoi[i].free();
-									
+
 									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel1, 1);
 									dem_ca_nho += 1;
 									dem += 1;
 								}
 							}
-							
+
 							for (int i = 0; i < 10; i++) {
 								if ((int)abs(x - muoito[i].xk) <= 50 && (int)abs(y - muoito[i].yk) <= 50 && dem >= 10 && muoito[i].test_alive == 1 && alive == true)
 								{
@@ -887,13 +964,13 @@ int main(int argc, char* args[])
 									muoito[i].yk = -100;*/
 									muoito[i].test_alive = 0;
 									muoito[i].free();
-									
+
 									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel2, 1);
 									dem_ca_vua += 1;
 									dem += 1;
 								}
 							}
-							
+
 							for (int i = 0; i < (int)muoito.size(); i++)
 							{
 								if (abs(x - muoito[i].xk) <= 20 && abs(y - muoito[i].yk) <= 20 && dem < 10)
@@ -917,7 +994,7 @@ int main(int argc, char* args[])
 									dem += 1;
 								}
 							}
-							
+
 							for (int i = 0; i < 5; i++)
 							{
 								if (abs(x - bigfish[i].xk) <= 20 && abs(y - bigfish[i].yk) <= 20 && dem < 20) {
@@ -979,7 +1056,7 @@ int main(int argc, char* args[])
 							{
 								win = true;
 								alive = false;
-								
+
 
 							}
 							if (win == true) {
@@ -1000,13 +1077,13 @@ int main(int argc, char* args[])
 					if (typegame == 2)
 					{
 						if (pause == false)
-						{	
+						{
 							ca_nho.Free();
 							ca_nho.SetColor(TextObject::RED_TEXT);
 							std::string val_str_mark_ca_nho = std::to_string(dem_ca_nho);
 							string strMark1(":");
 							strMark1 += val_str_mark_ca_nho;
-							
+
 							ca_vua.Free();
 							ca_vua.SetColor(TextObject::RED_TEXT);
 							std::string val_str_mark_ca_vua = std::to_string(dem_ca_vua);
@@ -1103,8 +1180,8 @@ int main(int argc, char* args[])
 										if (muoi[i].yk >= 700) muoi[i].ykdaptuong = -2;
 										if (muoi[i].yk <= 0) muoi[i].ykdaptuong = 2;
 									}
-									
-									 if (thu2[i] == 0)
+
+									if (thu2[i] == 0)
 									{
 										rectmuoi[i] = { muoi[i].xk -= (rand() % 3) , muoi[i].yk += canhodichuyen[i].dichuyen, 80, 80 };
 										SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
@@ -1112,7 +1189,7 @@ int main(int argc, char* args[])
 										{
 											rectmuoi[i] = { muoi[i].xk -= (rand() % 3) , muoi[i].yk += muoi[i].ykdaptuong, 80, 80 };
 											SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_NONE);
-											
+
 										}
 
 
@@ -1125,7 +1202,7 @@ int main(int argc, char* args[])
 										{
 											rectmuoi[i] = { muoi[i].xk += (rand() % 3) , muoi[i].yk += muoi[i].ykdaptuong, 80, 80 };
 											SDL_RenderCopyEx(gRenderer, muoi[i].Texmuoi, &ca_nho[k1], &rectmuoi[i], NULL, NULL, SDL_FLIP_HORIZONTAL);
-											
+
 										}
 
 									}
@@ -1170,7 +1247,7 @@ int main(int argc, char* args[])
 									{
 										k = 0;
 									}
-									
+
 									if (thucato[i] == 0)
 									{
 										Rectcato[i] = { muoito[i].xk -= 2, muoito[i].yk += 0, 80, 80 };
@@ -1217,7 +1294,7 @@ int main(int argc, char* args[])
 
 									}
 
-									
+
 									if (thubigfish[i] == 0)
 									{
 										Rectbigfish[i] = { bigfish[i].xk -= 2, bigfish[i].yk += 0, 150, 150 };
@@ -1237,48 +1314,48 @@ int main(int argc, char* args[])
 
 
 							SDL_Rect boss;
-							
-								if (x2 <= 0) {
 
-									thubossquaydau = false;
+							if (x2 <= 0) {
 
-								}
-								if (x2 >= 1280) {
+								thubossquaydau = false;
 
-									thubossquaydau = true;
-								}
-								if (thubossquaydau == false) {
-									boss = { x2 += 5, y2 += 0, 200, 200 };
-									SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_NONE);
-								}
-								if (thubossquaydau == true) {
-									boss = { x2 -= 5, y2 -= 0, 200, 200 };
-									SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_HORIZONTAL);
-								}
-								if (daban == false) {
-									delta_x = X - bullet.x;
-									delta_y = Y - bullet.y;
-									angle = atan2(delta_y, delta_x);
+							}
+							if (x2 >= 1280) {
 
-								}
-								daban = true;
+								thubossquaydau = true;
+							}
+							if (thubossquaydau == false) {
+								boss = { x2 += 5, y2 += 0, 200, 200 };
+								SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_NONE);
+							}
+							if (thubossquaydau == true) {
+								boss = { x2 -= 5, y2 -= 0, 200, 200 };
+								SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_HORIZONTAL);
+							}
+							if (daban == false) {
+								delta_x = X - bullet.x;
+								delta_y = Y - bullet.y;
+								angle = atan2(delta_y, delta_x);
 
-								SDL_Rect banbullet;
-								banbullet = { bullet.x += 10 * cos(angle), bullet.y += 10 * sin(angle), 30,30 };
-								SDL_RenderCopy(gRenderer, Bullet1, NULL, &banbullet);
-								if (bullet.y >= 720 || bullet.y <= 0 || bullet.x >= 1280 || bullet.x <= 0)
-								{
-									bullet.rebullet();
-									bullet.x = x2 + 100;
-									bullet.y = y2 + 100;
-									daban = false;
-								}
+							}
+							daban = true;
 
-
-							
+							SDL_Rect banbullet;
+							banbullet = { bullet.x += 10 * cos(angle), bullet.y += 10 * sin(angle), 30,30 };
+							SDL_RenderCopy(gRenderer, Bullet1, NULL, &banbullet);
+							if (bullet.y >= 720 || bullet.y <= 0 || bullet.x >= 1280 || bullet.x <= 0)
+							{
+								bullet.rebullet();
+								bullet.x = x2 + 100;
+								bullet.y = y2 + 100;
+								daban = false;
+							}
 
 
-							
+
+
+
+
 							for (int i = 0; i < (int)muoi.size(); i++) {
 								if ((int)abs(bullet.x - muoi[i].xk) <= 20 && (int)abs(bullet.y - muoi[i].yk) <= 20 && muoi[i].test_alive == 1 && alive == true)
 								{
@@ -1298,7 +1375,7 @@ int main(int argc, char* args[])
 
 								}
 							}
-							
+
 							for (int i = 0; i < 10; i++) {
 								if ((int)abs(bullet.x - muoito[i].xk) <= 50 && (int)abs(bullet.y - muoito[i].yk) <= 50 && muoito[i].test_alive == 1 && alive == true)
 								{
@@ -1316,8 +1393,8 @@ int main(int argc, char* args[])
 									daban = false;
 								}
 							}
-							
-							
+
+
 							for (int i = 0; i < (int)bigfish.size(); i++) {
 								if ((int)abs(bullet.x - bigfish[i].xk) <= 50 && (int)abs(bullet.y - bigfish[i].yk) <= 50 && bigfish[i].test_alive == 1 && alive == true)
 								{
@@ -1326,8 +1403,8 @@ int main(int argc, char* args[])
 									bigfish[i].yk = -100;*/
 									bigfish[i].test_alive = 0;
 
-									if(win == false) Mix_PlayChannel(-1, bang, 1);
-									
+									if (win == false) Mix_PlayChannel(-1, bang, 1);
+
 									bigfish[i].free();
 									bullet.rebullet();
 									bullet.x = x2 + 100;
@@ -1338,7 +1415,7 @@ int main(int argc, char* args[])
 
 								}
 							}
-							
+
 
 							for (int i = 0; i < (int)bigfish.size(); i++)
 							{
@@ -1752,7 +1829,7 @@ int main(int argc, char* args[])
 									muoi[i].yk = -100;*/
 									muoi[i].test_alive = 0;
 									muoi[i].free();
-									
+
 									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel1, 1);
 									dem_ca_nho += 1;
 									dem += 1;
@@ -1766,8 +1843,8 @@ int main(int argc, char* args[])
 									muoito[i].yk = -100;*/
 									muoito[i].test_alive = 0;
 									muoito[i].free();
-									
-									if(win == false || lose == true)	Mix_PlayChannel(-1, eatlevel2, 1);
+
+									if (win == false || lose == true)	Mix_PlayChannel(-1, eatlevel2, 1);
 									dem_ca_vua += 1;
 									dem += 1;
 								}
@@ -1789,7 +1866,7 @@ int main(int argc, char* args[])
 									bigfish[i].test_alive = 0;
 									bigfish[i].free();
 									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel3, 1);
-									dem_ca_to +=1;
+									dem_ca_to += 1;
 									dem += 1;
 								}
 							}

@@ -5,6 +5,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|E:\\GAME_GAME\\testcode\\CommonFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|solutionrelative:testcode\\CommonFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|E:\\GAME_GAME\\testcode\\mainFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|solutionrelative:testcode\\mainFunc.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|E:\\GAME_GAME\\testcode\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|solutionrelative:testcode\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|E:\\GAME_GAME\\testcode\\Text.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|solutionrelative:testcode\\Text.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|E:\\GAME_GAME\\testcode\\Text.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E3E35A8E-B5D8-4172-96EF-86E1A07BABA4}|testcode\\testcode.vcxproj|solutionrelative:testcode\\Text.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "mainFunc.h",
+              "DocumentMoniker": "E:\\GAME_GAME\\testcode\\mainFunc.h",
+              "RelativeDocumentMoniker": "testcode\\mainFunc.h",
+              "ToolTip": "E:\\GAME_GAME\\testcode\\mainFunc.h",
+              "RelativeToolTip": "testcode\\mainFunc.h",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAAAPIAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-22T11:31:48.672Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Text.h",
+              "DocumentMoniker": "E:\\GAME_GAME\\testcode\\Text.h",
+              "RelativeDocumentMoniker": "testcode\\Text.h",
+              "ToolTip": "E:\\GAME_GAME\\testcode\\Text.h",
+              "RelativeToolTip": "testcode\\Text.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-22T11:31:47.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "main.cpp",
+              "DocumentMoniker": "E:\\GAME_GAME\\testcode\\main.cpp",
+              "RelativeDocumentMoniker": "testcode\\main.cpp",
+              "ToolTip": "E:\\GAME_GAME\\testcode\\main.cpp",
+              "RelativeToolTip": "testcode\\main.cpp",
+              "ViewState": "AQIAAIEHAAAAAAAAAAAAAKkHAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-22T11:30:45.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Text.cpp",
+              "DocumentMoniker": "E:\\GAME_GAME\\testcode\\Text.cpp",
+              "RelativeDocumentMoniker": "testcode\\Text.cpp",
+              "ToolTip": "E:\\GAME_GAME\\testcode\\Text.cpp",
+              "RelativeToolTip": "testcode\\Text.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-22T11:31:43.378Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +92,7 @@
               "RelativeDocumentMoniker": "testcode\\CommonFunc.h",
               "ToolTip": "E:\\GAME_GAME\\testcode\\CommonFunc.h",
               "RelativeToolTip": "testcode\\CommonFunc.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAbAAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAAE4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-21T09:52:58.014Z",
               "EditorCaption": ""

@@ -40,7 +40,7 @@ SDL_Texture* Type2 = NULL;
 SDL_Texture* Type3 = NULL;
 SDL_Texture* board = NULL;
 SDL_Texture* pausegame = NULL;
-
+SDL_Texture* wood = NULL;
 SDL_Texture* option = NULL;
 SDL_Texture* option_item = NULL;
 SDL_Texture* arrow = NULL;

@@ -47,6 +47,12 @@ public:
 	}
 };
 
+class di_chuyen {
+public:
+	int ca_vua_di_chuyen = rand() % (4 - 1 + 1) + 1;
+	int ca_to_di_chuyen = rand() % (2 - 1 + 1) + 1;
+};
+
 TTF_Font* font_tong;
 
 TextObject ca_nho;
@@ -55,12 +61,16 @@ TextObject ca_to;
 TextObject dem_gio;
 TextObject sound;
 TextObject Music;
+TextObject score;
 
 std::vector<object> muoi;
 std::vector<object> muoito;
 std::vector<object> bigfish;
 
 std::vector<Move> canhodichuyen;
+
+std::vector<di_chuyen> Mid_Fish(10);
+std::vector<di_chuyen> Big_Fish(5);
 
 bool init();
 bool loadMedia();
@@ -152,6 +162,8 @@ bool loadMedia()
 	option = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/option.jpg");
 
 	option_item = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/item_.png");
+
+	wood = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/van_go.png");
 
 	arrow = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mui_ten.png");
 

@@ -62,6 +62,7 @@ TextObject dem_gio;
 TextObject sound;
 TextObject Music;
 TextObject score;
+TextObject dan_con_lai;
 
 std::vector<object> muoi;
 std::vector<object> muoito;
@@ -138,8 +139,14 @@ bool loadMedia()
 	font_tong = TTF_OpenFont("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/font/font_tong.ttf", 50);
 
 
-	Boss = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/taungamoke.png");
+
+	Boss[0] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/taungamoke.png");
+	Boss[1] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/tau_ngam_2.png");
+	Boss[2] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/tau_ngam_3.png");
+	Boss[3] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/tau_ngam_4.png");
+
 	music = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/ingame.mp3");
+
 	daddy = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/menu.mp3");
 	eatlevel1 = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/eatlevel1.wav");
 	eatlevel2 = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/eatlevel2.wav");
@@ -168,15 +175,20 @@ bool loadMedia()
 	arrow = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mui_ten.png");
 
 	turn_on = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/item_music_turnon.png");
+
 	turn_off = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/item_music_turnoff.png");
 
 	startmenu = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/startmenu.jpg");
 	Pause = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/pause.jpg");
+
 	Bullet1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet1.png");
+
 	Type = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/choose_type_oke.jpg");
 	Type1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
 	Type2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bg2.jpg");
 	Type3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bgk2.jpg");
+
+	play = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/play.png");
 	muoi.resize(20);
 	muoito.resize(10);
 	bigfish.resize(5);

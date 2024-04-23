@@ -76,10 +76,15 @@ int main(int argc, char* args[])
 
 	bool sound_button = true;
 
+	int BULLET = 50;
+
 	int start = 0;
 
 	bool musicon = true;
 	bool soundon = true;
+
+	int boss_type = 0;
+	int bullet_type = 0;
 
 	bool alive = true;
 	bullet.x = x2 + 100;
@@ -125,11 +130,12 @@ int main(int argc, char* args[])
 			SDL_Event e;
 			bool flipImage = false;
 
-			/*diem_so.SetColor(TextObject::WHITE_TEXT);*/
+			Mix_PlayMusic(daddy, -1);
 
 			while (!quit)
 			{
 				flameStart = SDL_GetTicks();
+
 				while (SDL_PollEvent(&e) != 0)
 				{
 
@@ -184,6 +190,9 @@ int main(int argc, char* args[])
 						dem_ca_to = 0;
 						typegame = 0;
 
+						BULLET = 50;
+
+
 
 						int h = 0;
 						int k = 0;
@@ -209,6 +218,7 @@ int main(int argc, char* args[])
 						for (int i = 0; i < (int)bigfish.size(); i++) {
 							bigfish[i].free();
 						}
+						if (musicon == true) Mix_PlayMusic(daddy, -1);
 					}
 
 					if (pause == true)
@@ -238,6 +248,7 @@ int main(int argc, char* args[])
 							size_x = 0;
 							size_y = 0;
 
+							BULLET = 50;
 
 							dem_ca_nho = 0;
 							dem_ca_vua = 0;
@@ -265,6 +276,7 @@ int main(int argc, char* args[])
 							for (int i = 0; i < (int)bigfish.size(); i++) {
 								bigfish[i].free();
 							}
+							if (musicon == true) Mix_PlayMusic(daddy, -1);
 						}
 					}
 					else
@@ -282,12 +294,14 @@ int main(int argc, char* args[])
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
 
-					Mix_PlayMusic(music, -1);
+
 
 					SDL_Rect startgame = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
 					SDL_RenderCopy(gRenderer, startmenu, NULL, &startgame);
 
+					SDL_Rect Play = { 503,275,235,70 };
+					SDL_RenderCopy(gRenderer, play, NULL, &Play);
 
 					SDL_Rect Option = { 503,402,230,70 };
 					SDL_RenderCopy(gRenderer, option_item, NULL, &Option);
@@ -299,7 +313,7 @@ int main(int argc, char* args[])
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
 
-					Mix_PlayMusic(music, -1);
+
 
 
 
@@ -362,24 +376,33 @@ int main(int argc, char* args[])
 						{
 							musicon = false;
 							e.type = SDL_MOUSEBUTTONUP;
+							Mix_HaltMusic();
 						}
 						else {
 							musicon = true;
 							e.type = SDL_MOUSEBUTTONUP;
+							Mix_PlayMusic(daddy, -1);
 						}
 
 					}
-					/*else if (e.type == SDL_MOUSEBUTTONUP ) { sound_button = false; }
 
-					if (SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 580 && x <= 628 && y >= 220 && y <= 268 && soundon == true )
-					{
-						soundon = false;
+					SDL_Rect submarine0 = { 780,130,160,105 };
+					SDL_RenderCopy(gRenderer, Boss[0], NULL, &submarine0);
 
-					}
-					else if (e.type == SDL_MOUSEBUTTONUP) { sound_button = true;}*/
+					SDL_Rect submarine1 = { 1055,130,160,105 };
+					SDL_RenderCopy(gRenderer, Boss[1], NULL, &submarine1);
+
+					SDL_Rect submarine2 = { 780,310,160,105 };
+					SDL_RenderCopy(gRenderer, Boss[2], NULL, &submarine2);
+
+					SDL_Rect submarine3 = { 1055,310,160,105 };
+					SDL_RenderCopy(gRenderer, Boss[3], NULL, &submarine3);
 
 
-
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 780 && x <= 940 && y >= 130 && y <= 235) boss_type = 0;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 1055 && x <= 1215 && y >= 130 && y <= 235) boss_type = 1;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 780 && x <= 940 && y >= 310 && y <= 415) boss_type = 2;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 1055 && x <= 1215 && y >= 310 && y <= 415) boss_type = 3;
 
 
 
@@ -419,7 +442,7 @@ int main(int argc, char* args[])
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
 
-					/*Mix_PlayMusic(music, -1);*/
+
 
 					SDL_Rect type = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
@@ -436,7 +459,7 @@ int main(int argc, char* args[])
 						click = true;
 						typegame = 1;
 						start = 2;
-
+						if (musicon == true) Mix_PlayMusic(music, -1);
 
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
@@ -445,7 +468,7 @@ int main(int argc, char* args[])
 						click = true;
 						typegame = 2;
 						start = 2;
-
+						if (musicon == true) Mix_PlayMusic(music, -1);
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 910 && x <= 1172 && y >= 247 && y <= 412)
@@ -453,7 +476,7 @@ int main(int argc, char* args[])
 						click = true;
 						typegame = 3;
 						start = 2;
-
+						if (musicon == true) Mix_PlayMusic(music, -1);
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 					SDL_Rect return_item = { 40,50,100,80 };
@@ -466,7 +489,7 @@ int main(int argc, char* args[])
 					}
 					else if (e.type == SDL_MOUSEBUTTONUP) click = false;
 					SDL_RenderPresent(gRenderer);
-					Mix_PlayMusic(music, -1);
+
 				}
 				if (pause == true)
 				{
@@ -474,7 +497,7 @@ int main(int argc, char* args[])
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
 
-					Mix_PlayMusic(music, -1);
+
 
 					SDL_Rect pausegame = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
@@ -844,11 +867,11 @@ int main(int argc, char* args[])
 								}
 								if (thubossquaydau == false) {
 									boss = { x2 += 5, y2 += 0, 200, 200 };
-									SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_NONE);
+									SDL_RenderCopyEx(gRenderer, Boss[boss_type], NULL, &boss, NULL, NULL, SDL_FLIP_NONE);
 								}
 								if (thubossquaydau == true) {
 									boss = { x2 -= 5, y2 -= 0, 200, 200 };
-									SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_HORIZONTAL);
+									SDL_RenderCopyEx(gRenderer, Boss[boss_type], NULL, &boss, NULL, NULL, SDL_FLIP_HORIZONTAL);
 								}
 								if (daban == false) {
 									delta_x = X - bullet.x;
@@ -971,7 +994,7 @@ int main(int argc, char* args[])
 									muoi[i].test_alive = 0;
 									muoi[i].free();
 
-									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel1, 1);
+									if (win == false || lose == true) if (soundon == true)Mix_PlayChannel(-1, eatlevel1, 1);
 									dem_ca_nho += 1;
 									dem += 1;
 								}
@@ -986,7 +1009,7 @@ int main(int argc, char* args[])
 									muoito[i].test_alive = 0;
 									muoito[i].free();
 
-									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel2, 1);
+									if (win == false || lose == true) if (soundon == true) Mix_PlayChannel(-1, eatlevel2, 1);
 									dem_ca_vua += 1;
 									dem += 2;
 								}
@@ -1009,7 +1032,7 @@ int main(int argc, char* args[])
 									bigfish[i].test_alive = 0;
 									bigfish[i].free();
 
-									if (win == false || lose == true) Mix_PlayChannel(-1, eatlevel3, 1);
+									if (win == false || lose == true) if (soundon == true) Mix_PlayChannel(-1, eatlevel3, 1);
 
 									dem_ca_to += 1;
 									dem += 3;
@@ -1116,6 +1139,12 @@ int main(int argc, char* args[])
 							string diem("RESULT:");
 							diem += val_str_mark_ca;
 
+							dan_con_lai.Free();
+							dan_con_lai.SetColor(TextObject::RED_TEXT);
+							std::string val_str_mark_dan = std::to_string(BULLET);
+							string Bullet("BULLET:");
+							Bullet += val_str_mark_dan;
+
 							SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 							SDL_RenderClear(gRenderer);
 
@@ -1137,8 +1166,11 @@ int main(int argc, char* args[])
 							SDL_Rect Board = { 0,0,1280,100 };
 							SDL_RenderCopy(gRenderer, board, NULL, &Board);
 
-							SDL_Rect result = { 720,10,300,80 };
+							SDL_Rect result = { 750,10,300,80 };
 							SDL_RenderCopy(gRenderer, wood, NULL, &result);
+
+							SDL_Rect sap_thua = { 440,10,300,80 };
+							SDL_RenderCopy(gRenderer, wood, NULL, &sap_thua);
 
 							SDL_Rect Pause = { 1125,17,106,70 };
 							SDL_RenderCopy(gRenderer, pausegame, NULL, &Pause);
@@ -1146,10 +1178,10 @@ int main(int argc, char* args[])
 							SDL_Rect IconSmall = { 30,30,40,40 };
 							SDL_RenderCopy(gRenderer, iconsmall, NULL, &IconSmall);
 
-							SDL_Rect IconMid = { SCREEN_WIDTH / 2 - 400,25,50,50 };
+							SDL_Rect IconMid = { SCREEN_WIDTH / 2 - 480,25,50,50 };
 							SDL_RenderCopy(gRenderer, iconmid, NULL, &IconMid);
 
-							SDL_Rect IconBig = { SCREEN_WIDTH - 800,25,60,60 };
+							SDL_Rect IconBig = { SCREEN_WIDTH - 990,20,60,60 };
 							SDL_RenderCopy(gRenderer, iconbig, NULL, &IconBig);
 
 							ca_nho.SetText(strMark1);
@@ -1158,15 +1190,19 @@ int main(int argc, char* args[])
 
 							ca_vua.SetText(strMark2);
 							ca_vua.LoadFromRenderText(font_tong, gRenderer);
-							ca_vua.RenderText(gRenderer, SCREEN_WIDTH / 2 - 350, 10);
+							ca_vua.RenderText(gRenderer, SCREEN_WIDTH / 2 - 430, 10);
 
 							ca_to.SetText(strMark3);
 							ca_to.LoadFromRenderText(font_tong, gRenderer);
-							ca_to.RenderText(gRenderer, SCREEN_WIDTH - 740, 10);
+							ca_to.RenderText(gRenderer, SCREEN_WIDTH - 925, 10);
 
 							score.SetText(diem);
 							score.LoadFromRenderText(font_tong, gRenderer);
-							score.RenderText(gRenderer, 748, 10);
+							score.RenderText(gRenderer, 768, 10);
+
+							dan_con_lai.SetText(Bullet);
+							dan_con_lai.LoadFromRenderText(font_tong, gRenderer);
+							dan_con_lai.RenderText(gRenderer, 460, 10);
 
 							SDL_Rect rectmuoi[50];
 							int testquaydau[50] = {};
@@ -1348,17 +1384,17 @@ int main(int argc, char* args[])
 								thubossquaydau = false;
 
 							}
-							if (x2 >= 1280) {
+							if (x2 >= 1150) {
 
 								thubossquaydau = true;
 							}
 							if (thubossquaydau == false) {
 								boss = { x2 += 5, y2 += 0, 200, 200 };
-								SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_NONE);
+								SDL_RenderCopyEx(gRenderer, Boss[boss_type], NULL, &boss, NULL, NULL, SDL_FLIP_NONE);
 							}
 							if (thubossquaydau == true) {
 								boss = { x2 -= 5, y2 -= 0, 200, 200 };
-								SDL_RenderCopyEx(gRenderer, Boss, NULL, &boss, NULL, NULL, SDL_FLIP_HORIZONTAL);
+								SDL_RenderCopyEx(gRenderer, Boss[boss_type], NULL, &boss, NULL, NULL, SDL_FLIP_HORIZONTAL);
 							}
 							if (daban == false) {
 								delta_x = X - bullet.x;
@@ -1373,6 +1409,7 @@ int main(int argc, char* args[])
 							SDL_RenderCopy(gRenderer, Bullet1, NULL, &banbullet);
 							if (bullet.y >= 720 || bullet.y <= 0 || bullet.x >= 1280 || bullet.x <= 0)
 							{
+								BULLET -= 1;
 								bullet.rebullet();
 								bullet.x = x2 + 100;
 								bullet.y = y2 + 100;
@@ -1399,6 +1436,7 @@ int main(int argc, char* args[])
 									bullet.y = y2 + 100;
 									dem_ca_nho += 1;
 									dem += 1;
+									BULLET -= 1;
 									daban = false;
 
 								}
@@ -1418,6 +1456,7 @@ int main(int argc, char* args[])
 									bullet.y = y2 + 100;
 									dem_ca_vua += 1;
 									dem += 2;
+									BULLET -= 1;
 									daban = false;
 								}
 							}
@@ -1502,6 +1541,11 @@ int main(int argc, char* args[])
 							if (win == true) {
 								SDL_Rect inwin = { 0,00,SCREEN_WIDTH ,SCREEN_HEIGHT };
 								SDL_RenderCopy(gRenderer, Win, NULL, &inwin);
+								lose = true;
+							}
+							if (BULLET <= 0 && dem < 100) {
+								lose = false;
+								win = false;
 							}
 							if (lose == false)
 							{
@@ -1872,7 +1916,7 @@ int main(int argc, char* args[])
 									muoi[i].test_alive = 0;
 									muoi[i].free();
 
-									if (dem < 100) Mix_PlayChannel(-1, eatlevel1, 1);
+									if (dem < 100) if (soundon == true) Mix_PlayChannel(-1, eatlevel1, 1);
 									dem_ca_nho += 1;
 									dem += 1;
 								}
@@ -1886,7 +1930,7 @@ int main(int argc, char* args[])
 									muoito[i].test_alive = 0;
 									muoito[i].free();
 
-									if (dem < 100)	Mix_PlayChannel(-1, eatlevel2, 1);
+									if (dem < 100) if (soundon == true)	Mix_PlayChannel(-1, eatlevel2, 1);
 									dem_ca_vua += 1;
 									dem += 2;
 								}
@@ -1907,7 +1951,7 @@ int main(int argc, char* args[])
 									bigfish[i].yk = -100;*/
 									bigfish[i].test_alive = 0;
 									bigfish[i].free();
-									if (dem < 100) Mix_PlayChannel(-1, eatlevel3, 1);
+									if (dem < 100) if (soundon == true) Mix_PlayChannel(-1, eatlevel3, 1);
 									dem_ca_to += 1;
 									dem += 3;
 								}
@@ -1935,6 +1979,7 @@ int main(int argc, char* args[])
 									}
 								}
 							}
+
 							for (int i = 0; i < (int)bigfish.size(); i++)
 							{
 								for (int j = 0; j < (int)muoi.size(); j++)
@@ -1950,6 +1995,7 @@ int main(int argc, char* args[])
 									}
 								}
 							}
+
 							for (int i = 0; i < (int)muoito.size(); i++)
 							{
 								for (int j = 0; j < (int)muoi.size(); j++)

@@ -24,7 +24,11 @@ SDL_Window* gWindow = NULL;
 
 SDL_Renderer* gRenderer = NULL;
 
-SDL_Texture* Boss = NULL;
+
+SDL_Texture* Boss[4] = { NULL };
+
+SDL_Texture* Bullet1 = { NULL };
+
 SDL_Texture* gTexture = NULL;
 SDL_Texture* gTexture1 = NULL;
 SDL_Texture* gTexture2 = NULL;
@@ -33,7 +37,7 @@ SDL_Texture* Win = NULL;
 SDL_Texture* Lose = NULL;
 SDL_Texture* startmenu = NULL;
 SDL_Texture* Pause = NULL;
-SDL_Texture* Bullet1 = NULL;
+
 SDL_Texture* Type = NULL;
 SDL_Texture* Type1 = NULL;
 SDL_Texture* Type2 = NULL;
@@ -50,6 +54,9 @@ SDL_Texture* turn_off = NULL;
 SDL_Texture* iconsmall = NULL;
 SDL_Texture* iconmid = NULL;
 SDL_Texture* iconbig = NULL;
+
+
+SDL_Texture* play = NULL;
 
 SDL_Texture* ulti = NULL;
 

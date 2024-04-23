@@ -27,7 +27,7 @@ SDL_Renderer* gRenderer = NULL;
 
 SDL_Texture* Boss[4] = { NULL };
 
-SDL_Texture* Bullet1 = { NULL };
+SDL_Texture* Bullet1[4] = { NULL };
 
 SDL_Texture* gTexture = NULL;
 SDL_Texture* gTexture1 = NULL;
@@ -54,7 +54,7 @@ SDL_Texture* turn_off = NULL;
 SDL_Texture* iconsmall = NULL;
 SDL_Texture* iconmid = NULL;
 SDL_Texture* iconbig = NULL;
-
+SDL_Texture* tick = NULL;
 
 SDL_Texture* play = NULL;
 

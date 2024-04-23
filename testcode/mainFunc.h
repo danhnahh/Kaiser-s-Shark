@@ -181,12 +181,17 @@ bool loadMedia()
 	startmenu = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/startmenu.jpg");
 	Pause = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/pause.jpg");
 
-	Bullet1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet1.png");
+	Bullet1[0] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet0.png");
+	Bullet1[1] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet1.png");
+	Bullet1[2] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet2.png");
+	Bullet1[3] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet3.png");
 
 	Type = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/choose_type_oke.jpg");
 	Type1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
 	Type2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bg2.jpg");
 	Type3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bgk2.jpg");
+
+	tick = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/TICK.png");
 
 	play = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/play.png");
 	muoi.resize(20);

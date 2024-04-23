@@ -23,24 +23,6 @@ int thubigfish[10000];
 bool thubossquaydau = false;
 
 
-//int i = 0;
-//int j = 0;
-//int count = 22;
-//int x = 0;
-//int y = 0;
-//double x1 = SCREEN_WIDTH / 2;
-//double y1 = 0;
-//double x2 = 250;
-//double y2 = 250;
-//int thu = 0;
-//
-//bool lose = true;
-//int h = 0;
-//int k = 0;
-//int h1 = 0;
-//int k1 = 0;
-//int h2 = 0;
-//int k2 = 0;
 
 int main(int argc, char* args[])
 {
@@ -84,7 +66,7 @@ int main(int argc, char* args[])
 	bool soundon = true;
 
 	int boss_type = 0;
-	int bullet_type = 0;
+	int Bullet_type = 0;
 
 	bool alive = true;
 	bullet.x = x2 + 100;
@@ -398,16 +380,44 @@ int main(int argc, char* args[])
 					SDL_Rect submarine3 = { 1055,310,160,105 };
 					SDL_RenderCopy(gRenderer, Boss[3], NULL, &submarine3);
 
+					SDL_Rect bullet0 = { 715,455,50,50 };
+					SDL_RenderCopy(gRenderer, Bullet1[0], NULL, &bullet0);
 
-					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 780 && x <= 940 && y >= 130 && y <= 235) boss_type = 0;
-					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 1055 && x <= 1215 && y >= 130 && y <= 235) boss_type = 1;
-					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 780 && x <= 940 && y >= 310 && y <= 415) boss_type = 2;
-					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 1055 && x <= 1215 && y >= 310 && y <= 415) boss_type = 3;
+					SDL_Rect bullet1 = { 865,455,50,50 };
+					SDL_RenderCopy(gRenderer, Bullet1[1], NULL, &bullet1);
+
+					SDL_Rect bullet2 = { 1015,455,55,55 };
+					SDL_RenderCopy(gRenderer, Bullet1[2], NULL, &bullet2);
+
+					SDL_Rect bullet3 = { 1165,455,50,50 };
+					SDL_RenderCopy(gRenderer, Bullet1[3], NULL, &bullet3);
+
+					SDL_Rect tick_tau;
+					SDL_Rect tick_dan;
+
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 780 && x <= 940 && y >= 130 && y <= 235) boss_type = 0;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 1055 && x <= 1215 && y >= 130 && y <= 235) boss_type = 1;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 780 && x <= 940 && y >= 310 && y <= 415) boss_type = 2;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_LEFT && x >= 1055 && x <= 1215 && y >= 310 && y <= 415) boss_type = 3;
+
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 715 && y >= 455 && x <= 765 && y <= 505) Bullet_type = 0;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 865 && y >= 455 && x <= 915 && y <= 505) Bullet_type = 1;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 1015 && y >= 455 && x <= 1070 && y <= 510) Bullet_type = 2;
+					if (e.type == SDL_MOUSEBUTTONDOWN && e.button.button && x >= 1165 && y >= 455 && x <= 1215 && y <= 505) Bullet_type = 3;
 
 
+					if (boss_type == 0) tick_tau = { 915,220,30,30 };
+					else if (boss_type == 1)tick_tau = { 1190,215,30,30 };
+					else if (boss_type == 2) tick_tau = { 915,400,30,30 };
+					else if (boss_type == 3) tick_tau = { 1185,385,30,30 };
 
+					if (Bullet_type == 0) tick_dan = { 755,490,20,20 };
+					else if (Bullet_type == 1) tick_dan = { 905,490,20,20 };
+					else if (Bullet_type == 2) tick_dan = { 1055,490,20,20 };
+					else if (Bullet_type == 3) tick_dan = { 1205,490,20,20 };
 
-
+					SDL_RenderCopy(gRenderer, tick, NULL, &tick_tau);
+					SDL_RenderCopy(gRenderer, tick, NULL, &tick_dan);
 					sound.Free();
 					sound.SetColor(TextObject::RED_TEXT);
 					string strMark1("SOUND:");
@@ -883,7 +893,7 @@ int main(int argc, char* args[])
 
 								SDL_Rect banbullet;
 								banbullet = { bullet.x += 10 * cos(angle), bullet.y += 10 * sin(angle), 30,30 };
-								SDL_RenderCopy(gRenderer, Bullet1, NULL, &banbullet);
+								SDL_RenderCopy(gRenderer, Bullet1[Bullet_type], NULL, &banbullet);
 								if (bullet.y >= 720 || bullet.y <= 0 || bullet.x >= 1280 || bullet.x <= 0)
 								{
 									bullet.rebullet();
@@ -1406,7 +1416,7 @@ int main(int argc, char* args[])
 
 							SDL_Rect banbullet;
 							banbullet = { bullet.x += 10 * cos(angle), bullet.y += 10 * sin(angle), 30,30 };
-							SDL_RenderCopy(gRenderer, Bullet1, NULL, &banbullet);
+							SDL_RenderCopy(gRenderer, Bullet1[Bullet_type], NULL, &banbullet);
 							if (bullet.y >= 720 || bullet.y <= 0 || bullet.x >= 1280 || bullet.x <= 0)
 							{
 								BULLET -= 1;

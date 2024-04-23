@@ -6,7 +6,7 @@ E:\GAME_GAME\testcode\main.cpp(272,9): warning C4244: '=': conversion from 'int'
 E:\GAME_GAME\testcode\main.cpp(273,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 E:\GAME_GAME\testcode\main.cpp(895,38): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
 E:\GAME_GAME\testcode\main.cpp(895,67): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(1418,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(1418,66): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(1415,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(1415,66): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
 E:\GAME_GAME\testcode\main.cpp(110,8): warning C4101: 'flameTime': unreferenced local variable
   testcode.vcxproj -> E:\GAME_GAME\Debug\testcode.exe

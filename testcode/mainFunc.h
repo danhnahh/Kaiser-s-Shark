@@ -23,6 +23,7 @@ public:
 		test_alive = 1;
 		xk = 1280 * ((std::rand() % 4) <= 1);
 		yk = std::rand() % (650 - 50 + 1) + 50;
+
 	}
 	object() :
 		xk(1280 * ((std::rand() % 4) <= 1)),
@@ -113,7 +114,6 @@ bool init()
 		return 0;
 	}
 
-	// Kh?i t?o SDL2_mixer
 	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
 		printf("SDL_mixer could not initialize! SDL_mixer Error: %s\n", Mix_GetError());
 		return 0;
@@ -122,10 +122,6 @@ bool init()
 	{
 		success = false;
 	}
-	/*font_tong = TTF_OpenFont("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/font/font_tong.ttf", 15);*/
-	/*if (font_tong == NULL) {
-		success = false;
-	}*/
 
 	return success;
 }
@@ -153,10 +149,9 @@ bool loadMedia()
 	eatlevel3 = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/eatlevel3.wav");
 	//bang = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/bang.wav");
 
-	gTexture = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
+
 	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
-	gTexture2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bg2.jpg");
-	gTexture3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bgk2.jpg");
+
 
 	ulti = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/ultimate.png");
 
@@ -198,21 +193,20 @@ bool loadMedia()
 	muoito.resize(10);
 	bigfish.resize(5);
 	canhodichuyen.resize(20);
+	muoi[0].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
 	for (int i = 0; i < 20; i++)
 	{
-		muoi[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
+		muoi[i].Texmuoi = muoi[0].Texmuoi;
 	}
+	muoito[0].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mid_fishok.png");
 	for (int i = 0; i < 10; i++)
 	{
-
-		muoito[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mid_fishok.png");
-
+		muoito[i].Texmuoi = muoito[0].Texmuoi;
 	}
+	bigfish[0].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
 	for (int i = 0; i < 5; i++)
 	{
-
-		bigfish[i].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
-
+		bigfish[i].Texmuoi = bigfish[0].Texmuoi;
 	}
 	Win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
 	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
@@ -231,7 +225,6 @@ SDL_Texture* loadTexture(std::string path)
 	newTexture = SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
 	//Get rid of old loaded surface
 	SDL_FreeSurface(loadedSurface);
-
 	return newTexture;
 }
 

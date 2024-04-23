@@ -176,12 +176,12 @@ int main(int argc, char* args[])
 
 
 
-						int h = 0;
-						int k = 0;
-						int h1 = 0;
-						int k1 = 0;
-						int h2 = 0;
-						int k2 = 0;
+						h = 0;
+						k = 0;
+						h1 = 0;
+						k1 = 0;
+						h2 = 0;
+						k2 = 0;
 						dem = 0;
 						size_x = 0;
 						size_y = 0;
@@ -289,7 +289,7 @@ int main(int argc, char* args[])
 					SDL_RenderCopy(gRenderer, option_item, NULL, &Option);
 					SDL_RenderPresent(gRenderer);
 				}
-				cout << x << " " << y << endl;
+				//cout << x << " " << y << endl;
 				if (start == 3 && click == false)
 				{
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -572,7 +572,7 @@ int main(int argc, char* args[])
 
 
 							SDL_RenderClear(gRenderer);
-							SDL_RenderCopy(gRenderer, gTexture, NULL, NULL);
+							SDL_RenderCopy(gRenderer, Type1, NULL, NULL);
 
 							SDL_Rect Board = { 0,0,1280,100 };
 							SDL_RenderCopy(gRenderer, board, NULL, &Board);
@@ -1171,7 +1171,7 @@ int main(int argc, char* args[])
 
 
 							SDL_RenderClear(gRenderer);
-							SDL_RenderCopy(gRenderer, gTexture2, NULL, NULL);
+							SDL_RenderCopy(gRenderer, Type2, NULL, NULL);
 
 							SDL_Rect Board = { 0,0,1280,100 };
 							SDL_RenderCopy(gRenderer, board, NULL, &Board);
@@ -1282,9 +1282,6 @@ int main(int argc, char* args[])
 									}
 								}
 							}
-
-
-
 
 
 
@@ -1426,18 +1423,9 @@ int main(int argc, char* args[])
 								daban = false;
 							}
 
-
-
-
-
-
 							for (int i = 0; i < (int)muoi.size(); i++) {
 								if ((int)abs(bullet.x - muoi[i].xk) <= 20 && (int)abs(bullet.y - muoi[i].yk) <= 20 && muoi[i].test_alive == 1 && alive == true)
 								{
-
-									/*SDL_DestroyTexture(muoi[i].Texmuoi);
-									muoi[i].xk = -100;
-									muoi[i].yk = -100;*/
 									muoi[i].test_alive = 0;
 									if (win == false) Mix_PlayChannel(-1, bang, 1);
 									muoi[i].free();
@@ -1455,9 +1443,6 @@ int main(int argc, char* args[])
 							for (int i = 0; i < 10; i++) {
 								if ((int)abs(bullet.x - muoito[i].xk) <= 50 && (int)abs(bullet.y - muoito[i].yk) <= 50 && muoito[i].test_alive == 1 && alive == true)
 								{
-									/*SDL_DestroyTexture(muoito[i].Texmuoi);
-									muoito[i].xk = -100;
-									muoito[i].yk = -100;*/
 									muoito[i].test_alive = 0;
 									if (win == false) Mix_PlayChannel(-1, bang, 1);
 									muoito[i].free();
@@ -1475,9 +1460,6 @@ int main(int argc, char* args[])
 							for (int i = 0; i < (int)bigfish.size(); i++) {
 								if ((int)abs(bullet.x - bigfish[i].xk) <= 50 && (int)abs(bullet.y - bigfish[i].yk) <= 50 && bigfish[i].test_alive == 1 && alive == true)
 								{
-									/*SDL_DestroyTexture(bigfish[i].Texmuoi);
-									bigfish[i].xk = -100;
-									bigfish[i].yk = -100;*/
 									bigfish[i].test_alive = 0;
 
 									if (win == false) Mix_PlayChannel(-1, bang, 1);
@@ -1498,12 +1480,8 @@ int main(int argc, char* args[])
 							{
 								for (int j = 0; j < (int)muoito.size(); j++)
 								{
-									//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
 									if (abs(bigfish[i].xk - muoito[j].xk) <= 50 && abs(bigfish[i].yk - muoito[j].yk) <= 50 && muoito[j].test_alive == 1)
 									{
-										/*SDL_DestroyTexture(muoito[j].Texmuoi);
-										muoito[j].xk = -100;
-										muoito[j].yk = -100;*/
 										muoito[j].test_alive = 0;
 										muoito[j].free();
 									}
@@ -1513,12 +1491,8 @@ int main(int argc, char* args[])
 							{
 								for (int j = 0; j < (int)muoi.size(); j++)
 								{
-									//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
 									if (abs(bigfish[i].xk - muoi[j].xk) <= 20 && abs(bigfish[i].yk - muoi[j].yk) <= 20 && muoi[j].test_alive == 1)
 									{
-										/*SDL_DestroyTexture(muoi[j].Texmuoi);
-										muoi[j].xk = -100;
-										muoi[j].yk = -100;*/
 										muoi[j].test_alive = 0;
 										muoi[j].free();
 									}
@@ -1528,12 +1502,8 @@ int main(int argc, char* args[])
 							{
 								for (int j = 0; j < (int)muoi.size(); j++)
 								{
-									//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
 									if (abs(muoito[i].xk - muoi[j].xk) <= 20 && abs(muoito[i].yk - muoi[j].yk) <= 20 && muoi[j].test_alive == 1)
 									{
-										/*SDL_DestroyTexture(muoi[j].Texmuoi);
-										muoi[j].xk = -100;
-										muoi[j].yk = -100;*/
 										muoi[j].test_alive = 0;
 										muoi[j].free();
 									}
@@ -1629,7 +1599,7 @@ int main(int argc, char* args[])
 
 
 							SDL_RenderClear(gRenderer);
-							SDL_RenderCopy(gRenderer, gTexture3, NULL, NULL);
+							SDL_RenderCopy(gRenderer, Type3, NULL, NULL);
 
 							SDL_Rect Board = { 0,0,1280,100 };
 							SDL_RenderCopy(gRenderer, board, NULL, &Board);
@@ -1920,9 +1890,6 @@ int main(int argc, char* args[])
 								if ((int)abs(x - muoi[i].xk) <= 20 && (int)abs(y - muoi[i].yk) <= 20 && muoi[i].test_alive == 1 && alive == true)
 								{
 
-									/*SDL_DestroyTexture(muoi[i].Texmuoi);
-									muoi[i].xk = -100;
-									muoi[i].yk = -100;*/
 									muoi[i].test_alive = 0;
 									muoi[i].free();
 
@@ -1934,9 +1901,7 @@ int main(int argc, char* args[])
 							for (int i = 0; i < 10; i++) {
 								if ((int)abs(x - muoito[i].xk) <= 50 && (int)abs(y - muoito[i].yk) <= 50 && dem >= 15 && muoito[i].test_alive == 1 && alive == true)
 								{
-									/*SDL_DestroyTexture(muoito[i].Texmuoi);
-									muoito[i].xk = -100;
-									muoito[i].yk = -100;*/
+
 									muoito[i].test_alive = 0;
 									muoito[i].free();
 
@@ -1956,9 +1921,7 @@ int main(int argc, char* args[])
 							for (int i = 0; i < (int)bigfish.size(); i++) {
 								if ((int)abs(x - bigfish[i].xk) <= 50 && (int)abs(y - bigfish[i].yk) <= 50 && dem >= 30 && bigfish[i].test_alive == 1 && alive == true)
 								{
-									/*SDL_DestroyTexture(bigfish[i].Texmuoi);
-									bigfish[i].xk = -100;
-									bigfish[i].yk = -100;*/
+
 									bigfish[i].test_alive = 0;
 									bigfish[i].free();
 									if (dem < 100) if (soundon == true) Mix_PlayChannel(-1, eatlevel3, 1);
@@ -1978,12 +1941,9 @@ int main(int argc, char* args[])
 							{
 								for (int j = 0; j < (int)muoito.size(); j++)
 								{
-									//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
 									if (abs(bigfish[i].xk - muoito[j].xk) <= 50 && abs(bigfish[i].yk - muoito[j].yk) <= 50 && muoito[j].test_alive == 1)
 									{
-										/*SDL_DestroyTexture(muoito[j].Texmuoi);
-										muoito[j].xk = -100;
-										muoito[j].yk = -100;*/
+
 										muoito[j].test_alive = 0;
 										muoito[j].free();
 									}
@@ -1994,12 +1954,9 @@ int main(int argc, char* args[])
 							{
 								for (int j = 0; j < (int)muoi.size(); j++)
 								{
-									//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
 									if (abs(bigfish[i].xk - muoi[j].xk) <= 20 && abs(bigfish[i].yk - muoi[j].yk) <= 20 && muoi[j].test_alive == 1)
 									{
-										/*SDL_DestroyTexture(muoi[j].Texmuoi);
-										muoi[j].xk = -100;
-										muoi[j].yk = -100;*/
+
 										muoi[j].test_alive = 0;
 										muoi[j].free();
 									}
@@ -2010,20 +1967,16 @@ int main(int argc, char* args[])
 							{
 								for (int j = 0; j < (int)muoi.size(); j++)
 								{
-									//if (abs(bigfish[i].xk - muoito[j].xk) <= 65 && abs(bigfish[i].yk - muoito[j].yk) <= 65) bigfish_gap_midfish = true;
 									if (abs(muoito[i].xk - muoi[j].xk) <= 20 && abs(muoito[i].yk - muoi[j].yk) <= 20 && muoi[j].test_alive == 1)
 									{
-										/*SDL_DestroyTexture(muoi[j].Texmuoi);
-										muoi[j].xk = -100;
-										muoi[j].yk = -100;*/
+
 										muoi[j].test_alive = 0;
 										muoi[j].free();
 									}
 								}
 							}
 
-							/*std::cout << dem <<" ";*/
-							/*cout << dem << " ";*/
+
 							SDL_Delay(20);
 							if (dem >= 100)
 							{

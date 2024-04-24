@@ -4,14 +4,6 @@
 using namespace std;
 
 
-bool init();
-
-
-bool loadMedia();
-
-
-void close();
-
 int thu2[10000];
 
 bool thudaptuong[10000];
@@ -23,11 +15,10 @@ int thubigfish[10000];
 bool thubossquaydau = false;
 
 
-
 int main(int argc, char* args[])
 {
 	Boss_Bullet bullet;
-	//std::srand(std::time(NULL));
+
 	int i = 0;
 	int j = 0;
 	int count = 22;
@@ -38,7 +29,6 @@ int main(int argc, char* args[])
 	int x2 = 250;
 	int y2 = 250;
 	int thu = 0;
-	//
 	bool lose = true;
 	int h = 0;
 	int k = 0;
@@ -83,12 +73,6 @@ int main(int argc, char* args[])
 
 	bool check_until = false;
 
-	/*diem_so.SetColor(TextObject::WHITE_TEXT);*/
-
-	/*float delta_x;
-	float delta_y;
-	float angle;*/
-	/*std::srand(std::time(nullptr));*/
 	if (!init())
 	{
 		printf("Failed to initialize!\n");
@@ -102,7 +86,6 @@ int main(int argc, char* args[])
 		}
 		else
 		{
-			/*Mix_PlayMusic(music, -1);*/
 
 			bool quit = false;
 
@@ -130,7 +113,6 @@ int main(int argc, char* args[])
 
 
 					SDL_GetMouseState((&x), (&y));
-					//cout << x << " " << y << endl;
 					if (e.type == SDL_MOUSEBUTTONDOWN && x >= 478 && x <= 755 && y >= 275 && y <= 354 && checktype == false && start == 0)
 					{
 
@@ -166,14 +148,13 @@ int main(int argc, char* args[])
 						x2 = 250;
 						y2 = 250;
 						int thu = 0;
-						//
+
 						dem_ca_nho = 0;
 						dem_ca_vua = 0;
 						dem_ca_to = 0;
 						typegame = 0;
 
 						BULLET = 50;
-
 
 
 						h = 0;
@@ -205,6 +186,15 @@ int main(int argc, char* args[])
 
 					if (pause == true)
 					{
+						SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
+						SDL_RenderClear(gRenderer);
+
+
+
+						SDL_Rect pausegame = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
+						SDL_RenderClear(gRenderer);
+						SDL_RenderCopy(gRenderer, Pause, NULL, &pausegame);
+						SDL_RenderPresent(gRenderer);
 						if (e.type == SDL_MOUSEBUTTONDOWN && x >= 448 && x <= 829 && y >= 193 && y <= 295)
 						{
 							pause = false;
@@ -289,34 +279,22 @@ int main(int argc, char* args[])
 					SDL_RenderCopy(gRenderer, option_item, NULL, &Option);
 					SDL_RenderPresent(gRenderer);
 				}
-				//cout << x << " " << y << endl;
+
 				if (start == 3 && click == false)
 				{
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
-
-
-
-
-
-
 
 					SDL_Rect game_option = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
 					SDL_RenderCopy(gRenderer, option, NULL, &game_option);
 
 
-
-
-
-
 					SDL_Rect Wood1 = { 373,208,300,75 };
 					SDL_RenderCopy(gRenderer, wood, NULL, &Wood1);
 					SDL_Rect Wood2 = { 373,309,300,75 };
 					SDL_RenderCopy(gRenderer, wood, NULL, &Wood2);
-					//cout << click;
 
-					//cout << x << " " << y << endl;
 					if (soundon == true)
 					{
 						SDL_Rect Sound = { 580,220,48,48 };
@@ -501,19 +479,6 @@ int main(int argc, char* args[])
 					SDL_RenderPresent(gRenderer);
 
 				}
-				if (pause == true)
-				{
-
-					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
-					SDL_RenderClear(gRenderer);
-
-
-
-					SDL_Rect pausegame = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
-					SDL_RenderClear(gRenderer);
-					SDL_RenderCopy(gRenderer, Pause, NULL, &pausegame);
-					SDL_RenderPresent(gRenderer);
-				}
 
 				if (typegame == 1 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_RIGHT) { check_until = true; }
 
@@ -553,7 +518,7 @@ int main(int argc, char* args[])
 							score.Free();
 							score.SetColor(TextObject::RED_TEXT);
 							std::string val_str_mark_ca = std::to_string(dem);
-							string diem("RESULT:");
+							string diem("SCORE:");
 							diem += val_str_mark_ca;
 
 							SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -1146,7 +1111,7 @@ int main(int argc, char* args[])
 							score.Free();
 							score.SetColor(TextObject::RED_TEXT);
 							std::string val_str_mark_ca = std::to_string(dem);
-							string diem("RESULT:");
+							string diem("SCORE:");
 							diem += val_str_mark_ca;
 
 							dan_con_lai.Free();
@@ -1364,8 +1329,6 @@ int main(int argc, char* args[])
 										thubigfish[i] = 1;
 
 									}
-
-
 									if (thubigfish[i] == 0)
 									{
 										Rectbigfish[i] = { bigfish[i].xk -= Big_Fish[i].ca_to_di_chuyen, bigfish[i].yk += 0, 150, 150 };
@@ -1549,14 +1512,6 @@ int main(int argc, char* args[])
 							if (e.motion.xrel < 0) {
 								fliptype = SDL_FLIP_HORIZONTAL;
 							}
-							/*std::cout << dem;*/
-
-
-
-
-
-
-
 
 
 							ca_nho.Free();
@@ -1580,7 +1535,7 @@ int main(int argc, char* args[])
 							score.Free();
 							score.SetColor(TextObject::RED_TEXT);
 							std::string val_str_mark_ca = std::to_string(dem);
-							string diem("RESULT:");
+							string diem("SCORE:");
 							diem += val_str_mark_ca;
 
 							SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
@@ -1594,7 +1549,6 @@ int main(int argc, char* args[])
 							topLeftViewport.w = SCREEN_WIDTH;
 							topLeftViewport.h = SCREEN_HEIGHT;
 							SDL_RenderSetViewport(gRenderer, &topLeftViewport);
-
 
 
 
@@ -1722,11 +1676,6 @@ int main(int argc, char* args[])
 									}
 								}
 							}
-
-
-
-
-
 
 							SDL_Rect Rectcato[10];
 

@@ -2,11 +2,11 @@
 E:\GAME_GAME\testcode\mainFunc.h(20,16): warning C4101: 'Texmuoi': unreferenced local variable
   (compiling source file 'main.cpp')
   
-E:\GAME_GAME\testcode\main.cpp(272,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(273,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(895,38): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(895,67): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(1415,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(1415,66): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-E:\GAME_GAME\testcode\main.cpp(110,8): warning C4101: 'flameTime': unreferenced local variable
+E:\GAME_GAME\testcode\main.cpp(262,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(263,9): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(860,38): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(860,67): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(1378,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(1378,66): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+E:\GAME_GAME\testcode\main.cpp(93,8): warning C4101: 'flameTime': unreferenced local variable
   testcode.vcxproj -> E:\GAME_GAME\Debug\testcode.exe

@@ -132,14 +132,14 @@ bool loadMedia()
 {
 
 	bool success = true;
-	font_tong = TTF_OpenFont("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/font/font_tong.ttf", 50);
+	//font_tong = TTF_OpenFont("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/font/font_tong.ttf", 50);
 
+	font_tong = TTF_OpenFont("font/font_tong.ttf", 50);
 
-
-	Boss[0] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/taungamoke.png");
-	Boss[1] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/tau_ngam_2.png");
-	Boss[2] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/tau_ngam_3.png");
-	Boss[3] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/tau_ngam_4.png");
+	Boss[0] = loadTexture("picture//taungamoke.png");
+	Boss[1] = loadTexture("picture//tau_ngam_2.png");
+	Boss[2] = loadTexture("picture//tau_ngam_3.png");
+	Boss[3] = loadTexture("picture//tau_ngam_4.png");
 
 	music = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/ingame.mp3");
 
@@ -150,66 +150,66 @@ bool loadMedia()
 	//bang = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/bang.wav");
 
 
-	gTexture1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mainshark.png");
+	gTexture1 = loadTexture("picture//mainshark.png");
 
 
-	ulti = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/ultimate.png");
+	ulti = loadTexture("picture//ultimate.png");
 
-	board = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/board.png");
-	pausegame = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/pausebutton.png");
-	iconsmall = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/iconsmall.png");
-	iconmid = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/iconmidfish.png");
-	iconbig = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/iconbigfish.png");
+	board = loadTexture("picture//board.png");
+	pausegame = loadTexture("picture//pausebutton.png");
+	iconsmall = loadTexture("picture//iconsmall.png");
+	iconmid = loadTexture("picture//iconmidfish.png");
+	iconbig = loadTexture("picture//iconbigfish.png");
 
-	option = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/option.jpg");
+	option = loadTexture("picture//option.jpg");
 
-	option_item = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/item_.png");
+	option_item = loadTexture("picture//item_.png");
 
-	wood = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/van_go.png");
+	wood = loadTexture("picture//van_go.png");
 
-	arrow = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mui_ten.png");
+	arrow = loadTexture("picture//mui_ten.png");
 
-	turn_on = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/item_music_turnon.png");
+	turn_on = loadTexture("picture//item_music_turnon.png");
 
-	turn_off = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/item_music_turnoff.png");
+	turn_off = loadTexture("picture//item_music_turnoff.png");
 
-	startmenu = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/startmenu.jpg");
-	Pause = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/pause.jpg");
+	startmenu = loadTexture("picture//startmenu.jpg");
+	Pause = loadTexture("picture//pause.jpg");
 
-	Bullet1[0] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet0.png");
-	Bullet1[1] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet1.png");
-	Bullet1[2] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet2.png");
-	Bullet1[3] = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bullet3.png");
+	Bullet1[0] = loadTexture("picture//bullet0.png");
+	Bullet1[1] = loadTexture("picture//bullet1.png");
+	Bullet1[2] = loadTexture("picture//bullet2.png");
+	Bullet1[3] = loadTexture("picture//bullet3.png");
 
-	Type = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/choose_type_oke.jpg");
-	Type1 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bkf.jpg");
-	Type2 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bg2.jpg");
-	Type3 = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/bgk2.jpg");
+	Type = loadTexture("picture//choose_type_oke.jpg");
+	Type1 = loadTexture("picture//bkf.jpg");
+	Type2 = loadTexture("picture//bg2.jpg");
+	Type3 = loadTexture("picture//bgk2.jpg");
 
-	tick = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/TICK.png");
+	tick = loadTexture("picture//TICK.png");
 
-	play = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/play.png");
+	play = loadTexture("picture//play.png");
 	muoi.resize(20);
 	muoito.resize(10);
 	bigfish.resize(5);
 	canhodichuyen.resize(20);
-	muoi[0].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/smallfish1.png");
+	muoi[0].Texmuoi = loadTexture("picture//smallfish1.png");
 	for (int i = 0; i < 20; i++)
 	{
 		muoi[i].Texmuoi = muoi[0].Texmuoi;
 	}
-	muoito[0].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/mid_fishok.png");
+	muoito[0].Texmuoi = loadTexture("picture//mid_fishok.png");
 	for (int i = 0; i < 10; i++)
 	{
 		muoito[i].Texmuoi = muoito[0].Texmuoi;
 	}
-	bigfish[0].Texmuoi = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/test1/test1/picture/bigfishok.png");
+	bigfish[0].Texmuoi = loadTexture("picture//bigfishok.png");
 	for (int i = 0; i < 5; i++)
 	{
 		bigfish[i].Texmuoi = bigfish[0].Texmuoi;
 	}
-	Win = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/win.jpg");
-	Lose = loadTexture("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/picture/defeat.png");
+	Win = loadTexture("picture//win.jpg");
+	Lose = loadTexture("picture//defeat.png");
 	return success;
 }
 
@@ -245,20 +245,6 @@ void close()
 	//Quit SDL subsystems
 	IMG_Quit();
 	SDL_Quit();
-}
-
-void handleRestart() {
-
-	close();
-
-
-	if (!init()) {
-		std::cout << "Failed to restart SDL." << std::endl;
-
-		return;
-	}
-
-
 }
 
 

@@ -24,6 +24,7 @@ SDL_Window* gWindow = NULL;
 
 SDL_Renderer* gRenderer = NULL;
 
+SDL_Surface* iconsurface = NULL;
 
 SDL_Texture* Boss[4] = { NULL };
 
@@ -55,6 +56,8 @@ SDL_Texture* iconsmall = NULL;
 SDL_Texture* iconmid = NULL;
 SDL_Texture* iconbig = NULL;
 SDL_Texture* tick = NULL;
+
+SDL_Texture* logo = NULL;
 
 SDL_Texture* play = NULL;
 

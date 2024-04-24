@@ -97,6 +97,8 @@ int main(int argc, char* args[])
 
 			Mix_PlayMusic(daddy, -1);
 
+			SDL_SetWindowIcon(gWindow, iconsurface);
+
 			while (!quit)
 			{
 				flameStart = SDL_GetTicks();
@@ -266,11 +268,12 @@ int main(int argc, char* args[])
 					SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 					SDL_RenderClear(gRenderer);
 
-
-
 					SDL_Rect startgame = { 0,0,SCREEN_WIDTH,SCREEN_HEIGHT };
 					SDL_RenderClear(gRenderer);
 					SDL_RenderCopy(gRenderer, startmenu, NULL, &startgame);
+
+					SDL_Rect Logo = { 360,120,560,120 };
+					SDL_RenderCopy(gRenderer, logo, NULL, &Logo);
 
 					SDL_Rect Play = { 503,275,235,70 };
 					SDL_RenderCopy(gRenderer, play, NULL, &Play);

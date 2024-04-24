@@ -134,6 +134,10 @@ bool loadMedia()
 	bool success = true;
 	//font_tong = TTF_OpenFont("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/font/font_tong.ttf", 50);
 
+	logo = loadTexture("picture//chu_menu.png");
+
+	iconsurface = IMG_Load("picture//logo.jpg");
+
 	font_tong = TTF_OpenFont("font/font_tong.ttf", 50);
 
 	Boss[0] = loadTexture("picture//taungamoke.png");

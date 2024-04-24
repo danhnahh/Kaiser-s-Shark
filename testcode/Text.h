@@ -23,8 +23,6 @@ public:
 	
 	enum TextColor {
 		RED_TEXT = 0,
-		WHITE_TEXT = 0,
-		BLACK_TEXT=0,
 	};
 	bool LoadFromFile(std::string path);
 	bool LoadFromRenderText(TTF_Font* font, SDL_Renderer* screen);

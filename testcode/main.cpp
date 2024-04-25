@@ -483,7 +483,7 @@ int main(int argc, char* args[])
 
 				}
 
-				if (typegame == 1 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_RIGHT) { check_until = true; }
+				if (typegame == 1 && e.type == SDL_MOUSEBUTTONDOWN && e.button.button == SDL_BUTTON_RIGHT && dem >= 100) { check_until = true; }
 
 				if (start == 2) {
 					if (typegame == 1)
@@ -517,12 +517,8 @@ int main(int argc, char* args[])
 							std::string val_str_mark_ca_to = std::to_string(dem_ca_to);
 							string strMark3(":");
 							strMark3 += val_str_mark_ca_to;
-
-							score.Free();
-							score.SetColor(TextObject::RED_TEXT);
-							std::string val_str_mark_ca = std::to_string(dem);
-							string diem("SCORE:");
-							diem += val_str_mark_ca;
+							
+							
 
 							SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
 							SDL_RenderClear(gRenderer);
@@ -572,9 +568,32 @@ int main(int argc, char* args[])
 							ca_to.LoadFromRenderText(font_tong, gRenderer);
 							ca_to.RenderText(gRenderer, SCREEN_WIDTH - 740, 10);
 
-							score.SetText(diem);
-							score.LoadFromRenderText(font_tong, gRenderer);
-							score.RenderText(gRenderer, 748, 10);
+
+							if (dem < 100) {
+								score.Free();
+								score.SetColor(TextObject::RED_TEXT);
+								std::string val_str_mark_ca = std::to_string(dem);
+								string diem("SCORE:");
+								diem += val_str_mark_ca;
+
+								score.SetText(diem);
+								score.LoadFromRenderText(font_tong, gRenderer);
+								score.RenderText(gRenderer, 748, 10);
+							}
+
+							if (dem >= 100) {
+								ULTI.Free();
+								ULTI.SetColor(TextObject::RED_TEXT);
+								
+								string oke("ULTI:");
+								score.SetText(oke);
+								score.LoadFromRenderText(font_tong, gRenderer);
+								score.RenderText(gRenderer, 760, 10);
+								
+								SDL_Rect datyeucau = { 890,10,80,80 };
+								SDL_RenderCopy(gRenderer, ulti, NULL, &datyeucau);
+							}
+
 
 							int toado_x = x - size_x / 2;
 							int toado_y = y - size_y / 2;

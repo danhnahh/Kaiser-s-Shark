@@ -64,6 +64,7 @@ TextObject sound;
 TextObject Music;
 TextObject score;
 TextObject dan_con_lai;
+TextObject ULTI;
 
 std::vector<object> muoi;
 std::vector<object> muoito;

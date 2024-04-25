@@ -122,6 +122,25 @@ https://www.pinterest.com/search/pins/?q=Fish%20animation&rs=srs&b_id=BGqUcd3Dbx
 - Âm thanh được dùng từ tựa game: Feeding Frenzy 2, chỉnh sủa âm thanh đượ dùng từ: Free Wav Sound Effects Download
 https://pixabay.com/sound-effects/search/wav/
 
+##  **Conclusion**
+### **Điều tâm đắc**
+- Hiểu được mô hình vận hành của một chương trình hoàn chỉnh
+- Biết được cách sử dụng Github
+- Biết được cách sử dụng các phần mềm chỉnh sửa cắt ghép ảnh
+- Biết được cách chỉnh sửa âm thanh
+- Học được cách setup môi trường, sử dụng thư viện ngoài (SDL2, SDL2_ttf, SDL2_mixer, SDL2_image, ...)
+- Học được kỹ thuật duyệt mảng, sinh số ngẫu nhiên
+
+### **Hạn chế**
+- Chưa chia được file
+- Code có vài chỗ hơi khó hiểu
+
+### **Hướng Phát triển**
+- Tạo thêm nhiều loại cá hơn nữa và có các chức năng khác nhau
+- Lưu tên người chơi
+- Thêm chế độ đếm giờ
+- Tạo thêm nhiều skills
+- Thêm chế độ 2 người chơi
 
 
 

@@ -86,7 +86,13 @@
 |![ultimate_](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/7316b3a2-0fa7-46c3-908e-7b16d4f63113)| Skill của cá|
 
 ## **Play-Game**
-
+- Khi vào chế độ 1: người chơi sẽ điều kiển cá bằng chuột và khi đạt đủ điều kiện người chơi có thể click chuột phải để dùng skill và win game
+![Screenshot 2024-04-25 221201](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/dbee0172-e571-4c56-8a18-0a84ce748119)
+![Screenshot 2024-04-25 222651](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/2c6cd6c6-1ce3-4bf6-b20a-2fd36f2205e5)
+- Khi vào chế độ chơi 2 người chơi sẽ điều kiển hướng đạn của một con tàu. Con tàu được mặc định là 50 viên nếu không đạt được 100 điểm trước khi hết đạn sẽ thua
+![Screenshot 2024-04-25 221507](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/cf962536-89ea-4454-a29b-fb09b0310e6d)
+- Khi vào chế dộ chơi 3 người chơi chơi như game cá bình thường khi đạt đủ 100 điểm thì sẽ chiến thắng
+![Screenshot 2024-04-25 221705](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/d3bb0c24-9d5b-460b-b755-fd2da36f2334)
 ## **Cách tải**
 - Yêu cầu có C++ compiler
   + Tạo một folder và git clone https://github.com/danhnahh/Kaiser-s-Shark.git

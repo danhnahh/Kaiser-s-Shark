@@ -42,6 +42,7 @@
 
 - Dùng chuột trái để di chuyển cá
 - Chế độ chơi 1: dùng chuột phải để dùng ultimate
+- Chế độ 2 : dùng chuột để diều kiển hướng của đạn
 
 ### *Preview*
 - Bắt đầu chơi sẽ xuất hiện màn hình như sau:

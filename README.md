@@ -28,7 +28,7 @@
 ## **Description** 
 ### *Game description and instruction* 
 - Đây là một trò chơi được lập trình với ngôn ngữ C++ và thư viện SDL2. Trò chơi được lấy ý tưởng từ game cá lớn nuốt cá bé xong được phát triển nhiều tính năng và nhiều chế độ chơi mới khác lạ và thú vị hơn.
-- Khác với cách chơi truyền thống Kaiser's Shark có nhiều tính năng và chế độ chơi mới lạ như:
+- Khác với cách chơi truyền thống, Kaiser's Shark có nhiều tính năng và chế độ chơi mới lạ như:
  + Chế độ chơi 1: (chế độ đánh boss) người chơi sẽ nhập vai vào một con cá mập đi ăn những con cá bé hơn và đến khi đủ sức mạnh có thể đánh nhau với Boss - một con tàu bắn ra những viên đạn để giết cá mập.
  + Chế độ chơi 2: Nhập vai vào con tàu để săn bắt cá. Người chơi sẽ được cung cập một số đạn nhất định và phải dùng số đạn đó để đoạt được số cá được quy định.
  + Chế dộ chơi 3: Chế độ basic nhập vai vào cá mập và đi ăn những con cá nhỏ hơn, tiến hóa dần khi đạt đủ số cá. Nếu khi đang nhỏ và đâm phải cá lớn hơn thì sẽ thua.
@@ -149,7 +149,6 @@ https://pixabay.com/sound-effects/search/wav/
 - CN. Trần Trường Thủy : Giảng viên
 - SV. Nguyễn Hoàng Dương : Mentor
 - D3.214 Team
-
 
 
 

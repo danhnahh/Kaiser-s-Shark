@@ -145,19 +145,19 @@ bool loadMedia()
 	Boss[2] = loadTexture("picture//tau_ngam_3.png");
 	Boss[3] = loadTexture("picture//tau_ngam_4.png");
 
-	music = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/ingame.mp3");
+	music = Mix_LoadMUS("music//ingame.mp3");
 
-	daddy = Mix_LoadMUS("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/menu.mp3");
-	eatlevel1 = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/eatlevel1.wav");
-	eatlevel2 = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/eatlevel2.wav");
-	eatlevel3 = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/eatlevel3.wav");
+	daddy = Mix_LoadMUS("music//menu.mp3");
+	eatlevel1 = Mix_LoadWAV("music//eatlevel1.wav");
+	eatlevel2 = Mix_LoadWAV("music//eatlevel2.wav");
+	eatlevel3 = Mix_LoadWAV("music//eatlevel3.wav");
 	//bang = Mix_LoadWAV("D:/UET/C++/vscode violet/CHECKCODE/testcode/Debug/music/bang.wav");
 
 
 	gTexture1 = loadTexture("picture//mainshark.png");
 
 
-	ulti = loadTexture("picture//ultimate.png");
+	ulti = loadTexture("picture//ultimate_.png");
 
 	board = loadTexture("picture//board.png");
 	pausegame = loadTexture("picture//pausebutton.png");

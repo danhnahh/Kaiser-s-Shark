@@ -64,6 +64,42 @@
 - Khi thua sẽ có màn hình như sau:
 ![Screenshot 2024-04-25 221207](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/fa2c05c3-2bbd-4565-bfb2-aea6a5766509)
 
+## **Objects In game**
+|                                         | Mô tả                                                                                        |
+|-----------------------------------------|--------------------------------------------------------------------------------------------------|
+|![ca_map](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/dee4ba55-e0cd-44d8-831e-62187fb16ebe)| Nhân vật chính của game|
+|![iconsmall](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/34695daf-6b3f-422e-b824-cdc83f2148ae)| Cá nhỏ có thể ăn được ngay khi vừa bắt đầu|
+|![iconmidfish](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/0c9fcbea-2b52-49e6-859d-1268c17d1b23)| Cá vừa có thể ăn được khi đặt level2|
+|![iconbigfish](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/1f96706a-4183-4462-bcc2-51790433373e)| Cá to có thể ăn được khi đạt level3|
+|![item_music_turnon](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/7a541b33-7091-4568-98a6-96e122d41c88)| Hiển thị âm thanh bật|
+|![item_music_turnoff](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/acbb48c3-ec9c-4501-a4a2-6decac75aaca)| hiển thị âm thanh tắt|
+|![mui_ten](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/a7a5fee5-fb38-4836-b4c0-bc0d49ed10c1)| Nút quay lại|
+|![pausebutton](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/e2b61380-9203-43df-a8e1-9899c5434c6e)| Nút dừng game|
+|![taungamoke](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/cb6d740f-0287-430d-95ad-7837738dc6f3)| Các loại tàu|
+|![tau_ngam_2](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/ddd9bcea-462e-4e16-983d-a1233a131420)| Các loại tàu|
+|![tau_ngam_3](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/978b2226-97c6-4e0f-b17f-7c8e851ff3be)| Các loại tàu|
+|![tau_ngam_4](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/493a7151-710e-4f4c-8e4a-f2df21e1c1cd)| Các loại tàu|
+|![bullet0](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/93c15097-905d-41eb-ad1e-2bd5766f7138)| Các loại đạn|
+|![bullet1](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/535d99a1-62fa-4400-8c13-1b093c11ea50)| Các loại đạn|
+|![bullet2](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/d49f9a5b-33fd-4aec-87ae-6f51702c65d4)| Các loại đạn|
+|![bullet3](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/fbbfb92d-1019-46ad-9ecc-8ebbbf330766)| Các loại đạn|
+|![ultimate_](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/7316b3a2-0fa7-46c3-908e-7b16d4f63113)| Skill của cá|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

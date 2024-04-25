@@ -141,9 +141,14 @@ https://pixabay.com/sound-effects/search/wav/
 - Thêm chế độ đếm giờ
 - Tạo thêm nhiều skills
 - Thêm chế độ 2 người chơi
+- Thêm chế độ mua đồ, nạp tiền
+- Thêm chế độ bảng xếp hạng
 
-
-
+## **A Special Thanks To**
+- TS. Lê Đức Trọng : Giảng viên
+- CN. Trần Trường Thủy : Giảng viên
+- SV. Nguyễn Hoàng Dương : Mentor
+- D3.214 Team
 
 
 

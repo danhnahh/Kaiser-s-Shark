@@ -13,9 +13,9 @@
   * [Control](#control)
   * [Preview](#preview)
 - [Objects In game](#objects-in-game)
-- [Setup](#setup)
+- [Cách tải](#Cách-tải)
 - [Play Game](#play-game)
-- [See also](#see-also)
+- [Kỹ thuật](#Kỹ-thuật)
   * [Các kỹ thuật sử dụng](#các-kỹ-thuật-sử-dụng)
   * [Các nguồn tham khảo](#các-nguồn-tham-khảo)
 - [Conclusion](#conclusion)
@@ -84,6 +84,37 @@
 |![bullet2](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/d49f9a5b-33fd-4aec-87ae-6f51702c65d4)| Các loại đạn|
 |![bullet3](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/fbbfb92d-1019-46ad-9ecc-8ebbbf330766)| Các loại đạn|
 |![ultimate_](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/7316b3a2-0fa7-46c3-908e-7b16d4f63113)| Skill của cá|
+
+## **Play-Game**
+
+## **Cách tải**
+- Yêu cầu có C++ compiler
+  + Tạo một folder và git clone https://github.com/danhnahh/Kaiser-s-Shark.git
+  + Vào file main.exe và chạy chương trình
+  + Tải xuống trực tiếp file .zip từ Github
+- Có vấn đề gì vui lòng liên hệ qua email : 23020007@vnu.edu.vn
+
+## **Kỹ thuật**
+### *Các kỹ thuật sử dụng*
+- Thư viện SDL2
+- Sử dụng nhiều class, vector, tách file, con trỏ, xâu chuỗi,biến, vòng lặp, cấu trúc rẽ nhánh, mảng, ...
+- Xử lý thao tác chuột, âm thanh, hình ảnh, chữ.
+- Tạo menu và các nút ấn di chuyển giữa các menu.
+- Tạo Option khi chơi : pause game, tắt/bật âm thanh, chọn các chế độ khác nhau, 
+- Sử dụng photoshop, paint để edit các ảnh dựa vào một số mẫu ảnh từ các nguồn khác.
+- Có sử dụng kiến thức về khoảng cách để tính toán va chạm của các đối tượng.
+
+### *Các nguồn kham khảo*
+- Cài đặt và setup SDL2 từ LazyFoo và các bạn, ngoài ra còn học qua kênh youtube: Phát Triển Phần Mềm 123A-Z
+- Học cách sử dụng SDL2:
+  + Học từ LazyFoo
+  + Qua các bài giảng của TS. Lê Đức Trọng
+  + Qua các bài giảng của CN. Trần Trường Thủy
+  +  Qua kênh youtube: Phát Triển Phần Mềm 123A-Z
+- Hình ảnh từ các nguồn trên google, pinterest
+https://www.pinterest.com/search/pins/?q=Fish%20animation&rs=srs&b_id=BGqUcd3DbxgxAAAAAAAAAAD9lsmEQmj9iVbAyMqSrccKa8xckJOz9Jgp0A_s4yjBKXBgbjVnItvW&source_id=rlp_ICQCPKfK
+- Âm thanh được dùng từ tựa game: Feeding Frenzy 2, chỉnh sủa âm thanh đượ dùng từ: Free Wav Sound Effects Download
+https://pixabay.com/sound-effects/search/wav/
 
 
 

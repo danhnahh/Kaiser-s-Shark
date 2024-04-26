@@ -97,6 +97,7 @@
 ![Screenshot 2024-04-25 221705](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/d3bb0c24-9d5b-460b-b755-fd2da36f2334)
 
 ## **Cách tải**
+- Lưu ý phải chạy game trên Visual Studio 2022
 - Yêu cầu có C++ compiler
   + Tạo một folder và git clone https://github.com/danhnahh/Kaiser-s-Shark.git
   + Vào file main.exe và chạy chương trình

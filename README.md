@@ -141,12 +141,16 @@ https://pixabay.com/sound-effects/search/wav/
 
 ##  **Conclusion**
 ### **Điều tâm đắc**
+- Sử dụng được SDL2
 - Hiểu được mô hình vận hành của một chương trình hoàn chỉnh
 - Biết được cách sử dụng Github
 - Biết được cách sử dụng các phần mềm chỉnh sửa cắt ghép ảnh
 - Biết được cách chỉnh sửa âm thanh
 - Học được cách setup môi trường, sử dụng thư viện ngoài (SDL2, SDL2_ttf, SDL2_mixer, SDL2_image, ...)
 - Học được kỹ thuật duyệt mảng, sinh số ngẫu nhiên
+- Có sự đa dạng giữa các chế độ chơi
+- Giao diện lúc vào game
+- Tạo ra những con cá có thể di chuyển tự do.
 
 ### **Hạn chế**
 - Chưa chia được file

@@ -88,6 +88,10 @@
 |![ultimate_](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/7316b3a2-0fa7-46c3-908e-7b16d4f63113)| Skill của cá|
 
 ## **Play-Game**
+|----------------|-------------|
+|![iconsmall](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/34695daf-6b3f-422e-b824-cdc83f2148ae)| +1 điểm|
+|![iconmidfish](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/0c9fcbea-2b52-49e6-859d-1268c17d1b23)| +2 điểm|
+|![iconbigfish](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/1f96706a-4183-4462-bcc2-51790433373e)| +3 điểm|
 - Khi vào chế độ 1: người chơi sẽ điều kiển cá bằng chuột và khi đạt đủ điều kiện người chơi có thể click chuột phải để dùng skill và win game
 ![Screenshot 2024-04-25 221201](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/dbee0172-e571-4c56-8a18-0a84ce748119)
 ![Screenshot 2024-04-25 222651](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/2c6cd6c6-1ce3-4bf6-b20a-2fd36f2205e5)

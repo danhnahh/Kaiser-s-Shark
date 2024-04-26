@@ -164,6 +164,8 @@ https://pixabay.com/sound-effects/search/wav/
 - SV. Nguyễn Hoàng Dương : Mentor
 - D3.214 Team
 
+## **Mức điểm tự đánh giá**
+Với tất cả những điều nêu trên và công sức của em, em nghĩ gảm của mình xứng đáng 9-9.5/10đ. Nếu có thấp hơn em cũng xin chấp nhận
 
 
 

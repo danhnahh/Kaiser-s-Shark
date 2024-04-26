@@ -88,7 +88,6 @@
 |![ultimate_](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/7316b3a2-0fa7-46c3-908e-7b16d4f63113)| Skill của cá|
 
 ## **Play-Game**
-|----------------|-------------|
 |![iconsmall](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/34695daf-6b3f-422e-b824-cdc83f2148ae)| +1 điểm|
 |![iconmidfish](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/0c9fcbea-2b52-49e6-859d-1268c17d1b23)| +2 điểm|
 |![iconbigfish](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/1f96706a-4183-4462-bcc2-51790433373e)| +3 điểm|

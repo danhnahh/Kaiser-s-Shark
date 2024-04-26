@@ -37,7 +37,7 @@
 - Trong phần option, người chơi có thể tùy chỉnh bật/tắt âm thanh. Ngoài ra còn có thể chọn tàu chiến và loại đạn nhằm kiến cho người chơi không bị nhàm chán.
 - Game còn hỗ trợ người chơi dùng trò chơi, chơi lại game và thoát game.
 - Kaiser's Shark chắn chắn sẽ không khiến người chơi thất vọng.
-- Video demo:
+- Video demo: https://youtu.be/D3W3us82lJY
 
 ### *Control* 
 

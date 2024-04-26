@@ -18,6 +18,7 @@
 - [Kỹ thuật](#Kỹ-thuật)
   * [Các kỹ thuật sử dụng](#các-kỹ-thuật-sử-dụng)
   * [Các nguồn tham khảo](#các-nguồn-tham-khảo)
+- [Source Code Game](#source-code-game)
 - [Conclusion](#conclusion)
   * [Điều tâm đắc](#điều-tâm-đắc)
   * [Hạn chế](#hạn-chế)
@@ -123,6 +124,16 @@
 https://www.pinterest.com/search/pins/?q=Fish%20animation&rs=srs&b_id=BGqUcd3DbxgxAAAAAAAAAAD9lsmEQmj9iVbAyMqSrccKa8xckJOz9Jgp0A_s4yjBKXBgbjVnItvW&source_id=rlp_ICQCPKfK
 - Âm thanh được dùng từ tựa game: Feeding Frenzy 2, chỉnh sủa âm thanh đượ dùng từ: Free Wav Sound Effects Download
 https://pixabay.com/sound-effects/search/wav/
+
+## **Source Code Game**
+- Folder picture: chứa tất cả các hình ảnh sử dụng
+- Folder music: chứa tất cả âm thanh được sử dụng
+- Folder font: chứa font chữ sử dụng
+- .gitignore: để chứa các file lớn
+- CommnonFunc.h: để khởi tạo các biến
+- mainFunc.h: xử lí các hình ảnh, âm nhạc, font
+- Text.h: khai báo để sử dụng font
+- main.cpp: logic chính của chương trình
 
 ##  **Conclusion**
 ### **Điều tâm đắc**

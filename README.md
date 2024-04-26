@@ -94,6 +94,7 @@
 ![Screenshot 2024-04-25 221507](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/cf962536-89ea-4454-a29b-fb09b0310e6d)
 - Khi vào chế dộ chơi 3 người chơi chơi như game cá bình thường khi đạt đủ 100 điểm thì sẽ chiến thắng
 ![Screenshot 2024-04-25 221705](https://github.com/danhnahh/Kaiser-s-Shark/assets/161802978/d3bb0c24-9d5b-460b-b755-fd2da36f2334)
+
 ## **Cách tải**
 - Yêu cầu có C++ compiler
   + Tạo một folder và git clone https://github.com/danhnahh/Kaiser-s-Shark.git

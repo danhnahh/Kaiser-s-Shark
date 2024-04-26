@@ -132,7 +132,7 @@ https://pixabay.com/sound-effects/search/wav/
 - .gitignore: để chứa các file lớn
 - CommnonFunc.h: để khởi tạo các biến
 - mainFunc.h: xử lí các hình ảnh, âm nhạc, font
-- Text.h: khai báo để sử dụng font
+- Text.h: khai báo để sử dụng font ( tham khảo của kênh youtube: Phát Triển Phần Mềm 123A-Z)
 - main.cpp: logic chính của chương trình
 
 ##  **Conclusion**
